@@ -1,0 +1,48 @@
+.avatarContainer {
+  margin-left: 8%;
+}
+
+.quoteContainer {
+  width: 50%;
+  margin-left: 25px;
+  box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.mainTextWrapper {
+  background-image: url('../../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  background-color: #19465b;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+@media (max-width: 960px) {
+  .avatarContainer {
+    margin-left: 4%;
+  }
+  .quoteContainer {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainTextWrapper {
+    flex-direction: column;
+    height: 600px;
+    padding-top: 60px;
+  }
+  .quoteContainer {
+    margin-left: 0;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .avatarContainer {
+    margin-left: 0;
+  }
+}
