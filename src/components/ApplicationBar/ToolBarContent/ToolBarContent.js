@@ -47,7 +47,7 @@ const ToolBarContent = props => {
           root: styles.typographyRoot,
         }}
       >
-        Parasca Marius Portofolio
+        Marius Parasca Portofolio
       </Typography>
       <div className={classes.gitHubIconContainer}>
         <GitHubIcon link="https://github.com/MariusParasca" text="GitHub" />
