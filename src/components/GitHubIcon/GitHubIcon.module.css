@@ -1,0 +1,10 @@
+.iconContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.iconContainer:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

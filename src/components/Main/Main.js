@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
   typographyH5Root: {
     color: '#ffffff',
     boxShadow: 'box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75)',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.3rem',
+    },
   },
 }));
 

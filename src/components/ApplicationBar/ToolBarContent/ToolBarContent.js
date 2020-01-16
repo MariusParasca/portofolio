@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles, Link, Typography, Hidden, IconButton } from '@material-ui/core';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
+import GitHubIcon from 'components/GitHubIcon/GitHubIcon';
 import classes from './ToolBarContent.module.css';
 
 const useStyles = makeStyles(theme => ({
@@ -16,10 +16,11 @@ const useStyles = makeStyles(theme => ({
       borderBottom: '1px solid #2196f3',
     },
   },
-  iconRoot: {
+  linkedInIconRoot: {
     color: '#2196f3',
     margin: '0 5px',
   },
+
   linkRoot: {
     '&:hover': {
       textDecoration: 'none',
@@ -48,24 +49,17 @@ const ToolBarContent = props => {
       >
         Parasca Marius Portofolio
       </Typography>
-      <Link classes={{ root: styles.linkRoot }} href="https://github.com/MariusParasca">
-        <div className={classes.iconContainer}>
-          <GitHubIcon
-            classes={{
-              root: styles.iconRoot,
-            }}
-          />
-          <span>GitHub</span>
-        </div>
-      </Link>
+      <div className={classes.gitHubIconContainer}>
+        <GitHubIcon link="https://github.com/MariusParasca" text="GitHub" />
+      </div>
       <Link classes={{ root: styles.linkRoot }} href="https://www.linkedin.com/in/marius-parasca-33785515b/">
         <div className={classes.iconContainer}>
           <LinkedInIcon
             classes={{
-              root: styles.iconRoot,
+              root: styles.linkedInIconRoot,
             }}
           />
-          <span>Linked In</span>
+          <span className={classes.linkedInIconText}>Linked In</span>
         </div>
       </Link>
     </div>
