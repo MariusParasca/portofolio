@@ -41,11 +41,30 @@ const Projects = () => {
         ]}
       />
       <Project
+        image="/static/images/rssAggregator.jpg"
+        projectTitle="Rss Aggregator"
+        firstGitHubText="Frontend"
+        firstGitHubLink="https://github.com/MariusParasca/rss-reader-frontend"
+        secondGitHubText="Backend"
+        secondGitHubLink="https://github.com/MariusParasca/rss-reader-backend"
+        description="Rss Aggregator is a project that adds rss feeds and stores all the new items that the rss feeds offer. 
+                     It also have a auto fetching service on the backend that fetches in background any new items for the rss feeds saved"
+        features={[
+          'JavaScript',
+          'React',
+          'Express',
+          'NodeJs',
+          'Sequelize',
+          'MySQL',
+          'Auto Fetch rss feed items Service',
+        ]}
+      />
+      <Project
         image="/static/images/lemnplai.jpg"
         projectTitle="Lemnplai"
         firstGitHubText="Frontend"
         firstGitHubLink="https://github.com/MariusParasca/lemnplai"
-        description="Lemplai it is a landing page that presents the products of a wood processing company"
+        description="Lemnplai it is a landing page that presents the products of a wood processing company"
         features={['React', 'Bootstrap', 'Landing page']}
       />
     </div>

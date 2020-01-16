@@ -126,6 +126,7 @@ const Project = props => {
               <CloseIcon />
             </div>
           </div>
+          <div>Go to repositories:</div>
           {getGitHubComponent()}
         </div>
       </Modal>
