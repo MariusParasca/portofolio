@@ -27,7 +27,7 @@ const Projects = () => {
         firstGitHubLink="https://github.com/MariusParasca/KeepTracker-frontend"
         secondGitHubText="Backend"
         secondGitHubLink="https://github.com/MariusParasca/KeepTracker-backend"
-        description="Keep Tracker is a platform where you can do a lot of stuff"
+        description="Keep Tracker is personal project that I is still work in progress. But still there are some cool features"
         features={[
           'React',
           'Express',
@@ -57,6 +57,7 @@ const Projects = () => {
           'Sequelize',
           'MySQL',
           'Auto Fetch rss feed items Service',
+          'Docker',
         ]}
       />
       <Project
