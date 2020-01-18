@@ -38,6 +38,7 @@ const Projects = () => {
           'Authentication Server',
           'Auto refresh for access token',
           'Protected routes',
+          'Material UI',
         ]}
       />
       <Project
@@ -58,6 +59,7 @@ const Projects = () => {
           'MySQL',
           'Auto Fetch rss feed items Service',
           'Docker',
+          'Material UI',
         ]}
       />
       <Project
