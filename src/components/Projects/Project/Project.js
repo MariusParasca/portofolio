@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import CloseIcon from '@material-ui/icons/Close';
 import {
   Card,
   CardContent,
@@ -9,8 +8,9 @@ import {
   Divider,
   IconButton,
   Hidden,
-  Modal,
   Link,
+  Menu,
+  MenuItem,
   makeStyles,
 } from '@material-ui/core';
 import LazyLoad from 'react-lazyload';
@@ -63,11 +63,15 @@ const useStyles = makeStyles(theme => ({
 const Project = props => {
   const styles = useStyles();
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
 
-  const toggleMoreButton = useCallback(() => {
-    setIsModalOpen(!isModalOpen);
-  }, [isModalOpen]);
+  const openMenu = useCallback(event => {
+    setAnchorEl(event.currentTarget);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setAnchorEl(null);
+  }, []);
 
   const getGitHubComponent = useCallback(() => {
     return (
@@ -107,9 +111,19 @@ const Project = props => {
               {getGitHubComponent()}
             </Hidden>
             <Hidden mdUp implementation="css" className={classes.iconHiddenContainer}>
-              <IconButton onClick={toggleMoreButton} classes={{ root: styles.iconButtonRoot }}>
+              <IconButton onClick={openMenu} classes={{ root: styles.iconButtonRoot }}>
                 <MoreHorizIcon />
               </IconButton>
+              <Menu keepMounted open={Boolean(anchorEl)} anchorEl={anchorEl} onClose={closeMenu}>
+                <MenuItem>
+                  <GitHubIcon text={props.firstGitHubText} color="#ffffff" link={props.firstGitHubLink} />
+                </MenuItem>
+                {props.secondGitHubText && props.secondGitHubLink && (
+                  <MenuItem>
+                    <GitHubIcon text={props.secondGitHubText} color="#ffffff" link={props.secondGitHubLink} />
+                  </MenuItem>
+                )}
+              </Menu>
             </Hidden>
           </div>
         </div>
@@ -117,22 +131,6 @@ const Project = props => {
           <ProjectContent description={props.description} features={props.features} />
         </CardContent>
       </Card>
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={isModalOpen}
-        onClose={toggleMoreButton}
-      >
-        <div className={classes.modalContainer}>
-          <div className={classes.exitContainer}>
-            <div className={classes.existButton} onClick={toggleMoreButton}>
-              <CloseIcon />
-            </div>
-          </div>
-          <div>Go to repositories:</div>
-          {getGitHubComponent()}
-        </div>
-      </Modal>
     </React.Fragment>
   );
 };
