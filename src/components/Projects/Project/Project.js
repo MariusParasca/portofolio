@@ -13,6 +13,7 @@ import {
   Link,
   makeStyles,
 } from '@material-ui/core';
+import LazyLoad from 'react-lazyload';
 
 import GitHubIcon from 'components/GitHubIcon/GitHubIcon';
 import ProjectContent from './ProjectContent/ProjectContent';
@@ -90,7 +91,9 @@ const Project = props => {
     <React.Fragment>
       <Card variant="outlined" classes={{ root: styles.cardRoot }}>
         <div className={classes.cardMediaContainer}>
-          <CardMedia image={props.image} title={props.projectTitle} classes={{ root: styles.cardMediaRoot }} />
+          <LazyLoad offset={100}>
+            <CardMedia image={props.image} title={props.projectTitle} classes={{ root: styles.cardMediaRoot }} />
+          </LazyLoad>
           <div className={classes.emptyContainer} />
           <div className={classes.bannerContainer}>
             <div className={classes.bannerTitleContainer}>
