@@ -9,7 +9,9 @@ const ProjectContent = props => {
   return (
     <React.Fragment>
       <Typography variant="body1">{props.description}</Typography>
-      <div className={classes.featuresContainer}>{features && features.map(feature => <Feature text={feature} />)}</div>
+      <div className={classes.featuresContainer}>
+        {features && features.map(feature => <Feature key={feature} text={feature} />)}
+      </div>
     </React.Fragment>
   );
 };

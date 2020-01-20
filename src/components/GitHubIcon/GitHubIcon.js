@@ -5,7 +5,6 @@ import { makeStyles, Link } from '@material-ui/core';
 import classes from './GitHubIcon.module.css';
 
 const GitHubIcon = props => {
-  console.log(props);
   const styles = makeStyles(theme => ({
     githubIconRoot: {
       color: props.color || '#000000',
