@@ -1,9 +1,7 @@
-import React, { useState, useCallback } from 'react';
-import MenuIcon from '@material-ui/icons/Menu';
-import { makeStyles, Hidden, Drawer, IconButton, AppBar, Toolbar } from '@material-ui/core';
+import React from 'react';
+import { makeStyles, AppBar, Toolbar } from '@material-ui/core';
 
 import ToolBarContent from './ToolBarContent/ToolBarContent';
-import classes from './ApplicationBar.module.css';
 
 const useStyles = makeStyles(theme => ({
   appBarRoot: {
@@ -21,12 +19,6 @@ const useStyles = makeStyles(theme => ({
 const ApplicationBar = () => {
   const styles = useStyles();
 
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  const toggleIsDrawerOpen = useCallback(() => {
-    setIsDrawerOpen(!isDrawerOpen);
-  }, [isDrawerOpen]);
-
   return (
     <React.Fragment>
       <AppBar
@@ -36,31 +28,9 @@ const ApplicationBar = () => {
         }}
       >
         <Toolbar>
-          <Hidden smUp implementation="css">
-            <IconButton
-              color="inherit"
-              classes={{ root: styles.menuIconRoot }}
-              aria-label="open drawer"
-              onClick={toggleIsDrawerOpen}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Hidden>
-          <Hidden xsDown implementation="css" className={classes.hiddenToolBarWrapper}>
-            <ToolBarContent />
-          </Hidden>
+          <ToolBarContent />
         </Toolbar>
       </AppBar>
-      <Hidden smUp implementation="css">
-        <Drawer
-          variant="temporary"
-          open={isDrawerOpen}
-          onClose={toggleIsDrawerOpen}
-          classes={{ paper: styles.drawerPaper }}
-        >
-          <ToolBarContent onClickBackButton={toggleIsDrawerOpen} />
-        </Drawer>
-      </Hidden>
     </React.Fragment>
   );
 };

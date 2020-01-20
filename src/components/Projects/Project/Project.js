@@ -16,6 +16,7 @@ import {
 import LazyLoad from 'react-lazyload';
 
 import GitHubIcon from 'components/GitHubIcon/GitHubIcon';
+import { SIZE_LG, SIZE_MD, SIZE_SM, SIZE_XS } from 'shared/constants';
 import ProjectContent from './ProjectContent/ProjectContent';
 import classes from './Project.module.css';
 
@@ -23,13 +24,6 @@ const useStyles = makeStyles(theme => ({
   cardRoot: {
     marginTop: '35px',
     boxShadow: '0px 0px 3px 0px rgba(0, 0, 0, 0.5)',
-  },
-  cardMediaRoot: {
-    height: '450px',
-    backgroundPosition: 'top',
-    [theme.breakpoints.down('xs')]: {
-      height: '450px',
-    },
   },
   dividerVertical: {
     backgroundColor: '#ffffff',
@@ -62,6 +56,24 @@ const useStyles = makeStyles(theme => ({
 
 const Project = props => {
   const styles = useStyles();
+  const customStyles = makeStyles(theme => ({
+    cardMediaRoot: {
+      height: '450px',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'top left',
+      backgroundImage: `url(/static/images/${props.image}-${SIZE_LG}.jpg)`,
+      [theme.breakpoints.down('md')]: {
+        backgroundImage: `url(/static/images/${props.image}-${SIZE_MD}.jpg)`,
+      },
+      [theme.breakpoints.down('sm')]: {
+        backgroundImage: `url(/static/images/${props.image}-${SIZE_SM}.jpg)`,
+      },
+      [theme.breakpoints.down('xs')]: {
+        backgroundImage: `url(/static/images/${props.image}-${SIZE_XS}.jpg)`,
+      },
+    },
+  }))();
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -96,7 +108,7 @@ const Project = props => {
       <Card variant="outlined" classes={{ root: styles.cardRoot }}>
         <div className={classes.cardMediaContainer}>
           <LazyLoad offset={100}>
-            <CardMedia image={props.image} title={props.projectTitle} classes={{ root: styles.cardMediaRoot }} />
+            <CardMedia title={props.projectTitle} classes={{ root: customStyles.cardMediaRoot }} />
           </LazyLoad>
           <div className={classes.emptyContainer} />
           <div className={classes.bannerContainer}>

@@ -23,7 +23,7 @@ const Projects = () => {
       <Project
         siteLink="http://rss-aggregator.parascamarius.me/"
         key="rssAggregator"
-        image="/static/images/rssAggregator.jpg"
+        image="rssAggregator"
         projectTitle="Rss Aggregator"
         firstGitHubText="Frontend"
         firstGitHubLink="https://github.com/MariusParasca/rss-reader-frontend"
@@ -47,7 +47,7 @@ const Projects = () => {
       />
       <Project
         key="keeTracker"
-        image="/static/images/keepTracker.jpg"
+        image="keepTracker"
         projectTitle="Keep Tracker (not deployed yet)"
         firstGitHubText="Frontend"
         firstGitHubLink="https://github.com/MariusParasca/KeepTracker-frontend"
@@ -71,7 +71,7 @@ const Projects = () => {
       <Project
         key="lemnplai"
         siteLink="http://lemnplai.parascamarius.me/"
-        image="/static/images/lemnplai.jpg"
+        image="lemnplai"
         projectTitle="Lemnplai"
         firstGitHubText="Frontend"
         firstGitHubLink="https://github.com/MariusParasca/lemnplai"
