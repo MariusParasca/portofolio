@@ -29,8 +29,8 @@ const Projects = () => {
         firstGitHubLink="https://github.com/MariusParasca/rss-reader-frontend"
         secondGitHubText="Backend"
         secondGitHubLink="https://github.com/MariusParasca/rss-reader-backend"
-        description="Rss Aggregator is an application that can manage (add/delete rss feed and see new items) any rss feeds. The application
-        also has a service that checks for any new items on the added rss feeds. If there are any new ones, it will store them in the database.
+        description="RSS Aggregator is an application that can manage (add/delete RSS feed and see new items) any RSS feeds. The application
+        also has a service that checks for any new items on the added RSS feeds. If there are any new ones, it will store them in the database.
         This service is not deployed because it will fill the database pretty quickly (the host is a free one)"
         features={[
           'JavaScript',
@@ -53,8 +53,7 @@ const Projects = () => {
         firstGitHubLink="https://github.com/MariusParasca/KeepTracker-frontend"
         secondGitHubText="Backend"
         secondGitHubLink="https://github.com/MariusParasca/KeepTracker-backend"
-        description="Keep Tracker is a personal project that is still work in progress. For know I implemented the login and register. I used token based authentication. 
-          It also have refresh token for auto refresh of the access token."
+        description="Keep Tracker is a personal project that is still work in progress. For now, I implemented the login and register. I used token-based authentication. It also has a refresh token for auto-refresh of the access token."
         features={[
           'React',
           'Express',
@@ -66,6 +65,7 @@ const Projects = () => {
           'Auto refresh for access token',
           'Protected routes',
           'Material UI',
+          'MongoDB',
         ]}
       />
       <Project
