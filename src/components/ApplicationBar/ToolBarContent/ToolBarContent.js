@@ -5,7 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from 'components/GitHubIcon/GitHubIcon';
 import classes from './ToolBarContent.module.css';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   typographyRoot: {
     color: '#000000',
     flexGrow: 1,
@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const ToolBarContent = props => {
+const ToolBarContent = (props) => {
   const styles = useStyles();
 
   return (
@@ -41,7 +41,11 @@ const ToolBarContent = props => {
         <div className={classes.gitHubIconContainer}>
           <GitHubIcon link="https://github.com/MariusParasca" text="GitHub" />
         </div>
-        <Link classes={{ root: styles.linkRoot }} href="https://www.linkedin.com/in/marius-parasca-33785515b/">
+        <Link
+          classes={{ root: styles.linkRoot }}
+          href="https://www.linkedin.com/in/marius-parasca-33785515b/"
+          target="_blank"
+        >
           <div className={classes.iconContainer}>
             <LinkedInIcon
               classes={{

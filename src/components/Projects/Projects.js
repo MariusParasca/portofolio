@@ -4,7 +4,7 @@ import { Typography, makeStyles } from '@material-ui/core';
 import Project from './Project/Project';
 import classes from './Projects.module.css';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   typographyRoot: {
     [theme.breakpoints.down('xs')]: {
       fontSize: '3rem',
@@ -20,6 +20,64 @@ const Projects = () => {
       <Typography variant="h2" align="center" classes={{ root: styles.typographyRoot }}>
         Projects
       </Typography>
+      <Project
+        siteLink="http://shipstock.com"
+        key="shipstock"
+        image="shipstock"
+        projectTitle="ShipStock Landing Page"
+        description="ShipStock Landing Page"
+        features={['JavaScript', 'Webpack', 'HTML', 'Sass']}
+      />
+      <Project
+        siteLink="http://eznote.xyz"
+        key="eznote"
+        image="eznote"
+        projectTitle="Note taker"
+        description="Note taker"
+        features={[
+          'JavaScript',
+          'React',
+          'Material UI',
+          'React Split Pane',
+          'React Simple Keyboard',
+          'React Draggable',
+        ]}
+      />
+      <Project
+        siteLink="http://editcode.xyz"
+        key="editcode"
+        image="editcode"
+        projectTitle="Javascript Code Editor"
+        description="Javascript Code Editor"
+        features={['JavaScript', 'React', 'Material UI', 'Code Mirror', 'Html2canvas', 'Eslint browser', 'Prettier']}
+      />
+      <Project
+        siteLink="http://extractcolor.com"
+        key="extractcolor"
+        image="extractcolor"
+        projectTitle="Extract Color"
+        description="Extract Color description"
+        features={[
+          'JavaScript',
+          'React',
+          'Material UI',
+          'Html2canvas',
+          'JSPdf',
+          'Redux',
+          'Chroma JS',
+          'Framer Motion',
+          'Node-vibrant',
+          'React Drop zone',
+        ]}
+      />
+      <Project
+        siteLink="http://colorchance.com"
+        key="colorchance"
+        image="colorchance"
+        projectTitle="Color Chance"
+        description="Color Chance description"
+        features={['JavaScript', 'React', 'Material UI', 'Html2canvas', 'JSPdf', 'Redux', 'Chroma JS', 'Framer Motion']}
+      />
       <Project
         siteLink="http://rss-aggregator.parascamarius.me/"
         key="rssAggregator"

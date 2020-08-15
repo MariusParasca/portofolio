@@ -4,8 +4,8 @@ import { makeStyles, Link } from '@material-ui/core';
 
 import classes from './GitHubIcon.module.css';
 
-const GitHubIcon = props => {
-  const styles = makeStyles(theme => ({
+const GitHubIcon = (props) => {
+  const styles = makeStyles((theme) => ({
     githubIconRoot: {
       color: props.color || '#000000',
       margin: '0 5px',
@@ -33,7 +33,7 @@ const GitHubIcon = props => {
   }))();
 
   return (
-    <Link classes={{ root: styles.linkRoot }} href={props.link}>
+    <Link classes={{ root: styles.linkRoot }} href={props.link} target="_blank">
       <div className={classes.iconContainer}>
         <GitHub
           classes={{

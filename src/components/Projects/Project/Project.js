@@ -20,7 +20,7 @@ import { SIZE_LG, SIZE_MD, SIZE_SM, SIZE_XS } from 'shared/constants';
 import ProjectContent from './ProjectContent/ProjectContent';
 import classes from './Project.module.css';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   cardRoot: {
     marginTop: '35px',
     boxShadow: '0px 0px 3px 0px rgba(0, 0, 0, 0.5)',
@@ -54,9 +54,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Project = props => {
+const Project = (props) => {
   const styles = useStyles();
-  const customStyles = makeStyles(theme => ({
+  const customStyles = makeStyles((theme) => ({
     cardMediaRoot: {
       height: '450px',
       backgroundSize: 'cover',
@@ -77,7 +77,7 @@ const Project = props => {
 
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const openMenu = useCallback(event => {
+  const openMenu = useCallback((event) => {
     setAnchorEl(event.currentTarget);
   }, []);
 
@@ -88,9 +88,11 @@ const Project = props => {
   const getGitHubComponent = useCallback(() => {
     return (
       <React.Fragment>
-        <div className={classes.iconContainer}>
-          <GitHubIcon text={props.firstGitHubText} color="#ffffff" link={props.firstGitHubLink} />
-        </div>
+        {props.firstGitHubLink && props.firstGitHubLink && (
+          <div className={classes.iconContainer}>
+            <GitHubIcon text={props.firstGitHubText} color="#ffffff" link={props.firstGitHubLink} />
+          </div>
+        )}
         {props.secondGitHubText && props.secondGitHubLink && (
           <React.Fragment>
             <Divider orientation="vertical" classes={{ vertical: styles.dividerVertical }} />
@@ -113,7 +115,7 @@ const Project = props => {
           <div className={classes.emptyContainer} />
           <div className={classes.bannerContainer}>
             <div className={classes.bannerTitleContainer}>
-              <Link href={props.siteLink || '#'} classes={{ root: styles.titleLinkRoot }}>
+              <Link href={props.siteLink || '#'} target="_blank" classes={{ root: styles.titleLinkRoot }}>
                 <Typography variant="h5" classes={{ root: styles.typographyRoot }}>
                   {props.projectTitle}
                 </Typography>
@@ -123,19 +125,26 @@ const Project = props => {
               {getGitHubComponent()}
             </Hidden>
             <Hidden mdUp implementation="css" className={classes.iconHiddenContainer}>
-              <IconButton onClick={openMenu} classes={{ root: styles.iconButtonRoot }}>
-                <MoreHorizIcon />
-              </IconButton>
-              <Menu keepMounted open={Boolean(anchorEl)} anchorEl={anchorEl} onClose={closeMenu}>
-                <MenuItem>
-                  <GitHubIcon text={props.firstGitHubText} color="#ffffff" link={props.firstGitHubLink} />
-                </MenuItem>
-                {props.secondGitHubText && props.secondGitHubLink && (
-                  <MenuItem>
-                    <GitHubIcon text={props.secondGitHubText} color="#ffffff" link={props.secondGitHubLink} />
-                  </MenuItem>
-                )}
-              </Menu>
+              {props.firstGitHubLink && props.firstGitHubLink && props.secondGitHubText && props.secondGitHubLink && (
+                <>
+                  <IconButton onClick={openMenu} classes={{ root: styles.iconButtonRoot }}>
+                    <MoreHorizIcon />
+                  </IconButton>
+
+                  <Menu keepMounted open={Boolean(anchorEl)} anchorEl={anchorEl} onClose={closeMenu}>
+                    {props.firstGitHubLink && props.firstGitHubLink && (
+                      <MenuItem>
+                        <GitHubIcon text={props.firstGitHubText} color="#ffffff" link={props.firstGitHubLink} />
+                      </MenuItem>
+                    )}
+                    {props.secondGitHubText && props.secondGitHubLink && (
+                      <MenuItem>
+                        <GitHubIcon text={props.secondGitHubText} color="#ffffff" link={props.secondGitHubLink} />
+                      </MenuItem>
+                    )}
+                  </Menu>
+                </>
+              )}
             </Hidden>
           </div>
         </div>
