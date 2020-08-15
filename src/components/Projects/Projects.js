@@ -26,7 +26,7 @@ const Projects = () => {
         image="shipstock"
         projectTitle="ShipStock Landing Page"
         description="ShipStock Landing Page"
-        features={['JavaScript', 'Webpack', 'HTML', 'Sass']}
+        features={['JavaScript', 'Webpack', 'HTML', 'CSS', 'Sass']}
       />
       <Project
         siteLink="http://eznote.xyz"
