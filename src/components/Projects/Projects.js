@@ -49,19 +49,12 @@ const Projects = () => {
         ]}
       />
       <Project
-        siteLink="http://eznote.xyz"
-        key="eznote"
-        image="eznote"
-        projectTitle="Note Taker"
-        description="Note Taker is an easy way to take easy notes"
-        features={[
-          'JavaScript',
-          'React',
-          'Material UI',
-          'React Split Pane',
-          'React Simple Keyboard',
-          'React Draggable',
-        ]}
+        siteLink="http://colorchance.com"
+        key="colorchance"
+        image="colorchance"
+        projectTitle="Color Chance"
+        description="Color Chance is an application that generates random colors based on some settings that you set. This app is great for trying to find new colors for designing a website, banner, etc. The colors that are generated could be saved and downloaded in different formats: txt, image and pdf"
+        features={['JavaScript', 'React', 'Material UI', 'Html2canvas', 'JSPdf', 'Redux', 'Chroma JS', 'Framer Motion']}
       />
       <Project
         siteLink="http://editcode.xyz"
@@ -70,14 +63,6 @@ const Projects = () => {
         projectTitle="Javascript Code Editor"
         description="Javascript Code is an easy way to edit and run javascript code. The application is design for code beginners that started to learn javascript and want an easy setup to learn about it"
         features={['JavaScript', 'React', 'Material UI', 'Code Mirror', 'Html2canvas', 'Eslint browser', 'Prettier']}
-      />
-      <Project
-        siteLink="http://colorchance.com"
-        key="colorchance"
-        image="colorchance"
-        projectTitle="Color Chance"
-        description="Color Chance is an application that generates random colors based on some settings that you set. This app is great for trying to find new colors for designing a website, banner, etc. The colors that are generated could be saved and downloaded in different formats: txt, image and pdf"
-        features={['JavaScript', 'React', 'Material UI', 'Html2canvas', 'JSPdf', 'Redux', 'Chroma JS', 'Framer Motion']}
       />
       <Project
         siteLink="http://extractcolor.com"
@@ -96,6 +81,21 @@ const Projects = () => {
           'Framer Motion',
           'Node-vibrant',
           'React Drop zone',
+        ]}
+      />
+      <Project
+        siteLink="http://eznote.xyz"
+        key="eznote"
+        image="eznote"
+        projectTitle="Note Taker"
+        description="Note Taker is an easy way to take easy notes"
+        features={[
+          'JavaScript',
+          'React',
+          'Material UI',
+          'React Split Pane',
+          'React Simple Keyboard',
+          'React Draggable',
         ]}
       />
       <Project
