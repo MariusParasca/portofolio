@@ -25,7 +25,7 @@ const Projects = () => {
         key="shipstock"
         image="shipstock"
         projectTitle="ShipStock Landing Page"
-        description="ShipStock Landing Page"
+        description="The landing page for ShipStock application"
         features={['JavaScript', 'Webpack', 'HTML', 'CSS', 'Sass']}
       />
       <Project
@@ -33,7 +33,7 @@ const Projects = () => {
         key="shipstockapp"
         image="shipstockapp"
         projectTitle="ShipStock App"
-        description="ShipStock App"
+        description="ShipStock Application is a social network that connects all together the maritime community"
         features={[
           'JavaScript',
           'React',
@@ -52,8 +52,8 @@ const Projects = () => {
         siteLink="http://eznote.xyz"
         key="eznote"
         image="eznote"
-        projectTitle="Note taker"
-        description="Note taker"
+        projectTitle="Note Taker"
+        description="Note Taker is an easy way to take easy notes"
         features={[
           'JavaScript',
           'React',
@@ -68,15 +68,23 @@ const Projects = () => {
         key="editcode"
         image="editcode"
         projectTitle="Javascript Code Editor"
-        description="Javascript Code Editor"
+        description="Javascript Code is an easy way to edit and run javascript code. The application is design for code beginners that started to learn javascript and want an easy setup to learn about it"
         features={['JavaScript', 'React', 'Material UI', 'Code Mirror', 'Html2canvas', 'Eslint browser', 'Prettier']}
+      />
+      <Project
+        siteLink="http://colorchance.com"
+        key="colorchance"
+        image="colorchance"
+        projectTitle="Color Chance"
+        description="Color Chance is an application that generates random colors based on some settings that you set. This app is great for trying to find new colors for designing a website, banner, etc. The colors that are generated could be saved and downloaded in different formats: txt, image and pdf"
+        features={['JavaScript', 'React', 'Material UI', 'Html2canvas', 'JSPdf', 'Redux', 'Chroma JS', 'Framer Motion']}
       />
       <Project
         siteLink="http://extractcolor.com"
         key="extractcolor"
         image="extractcolor"
         projectTitle="Extract Color"
-        description="Extract Color description"
+        description="Extract Color is an application that extracts the main colors from an image. You are able to upload an image, search images by typing some words and take the main colors from an website that you like by typing the link of it. The colors that are generated could be saved and downloaded in different formats: txt, image and pdf"
         features={[
           'JavaScript',
           'React',
@@ -89,14 +97,6 @@ const Projects = () => {
           'Node-vibrant',
           'React Drop zone',
         ]}
-      />
-      <Project
-        siteLink="http://colorchance.com"
-        key="colorchance"
-        image="colorchance"
-        projectTitle="Color Chance"
-        description="Color Chance description"
-        features={['JavaScript', 'React', 'Material UI', 'Html2canvas', 'JSPdf', 'Redux', 'Chroma JS', 'Framer Motion']}
       />
       <Project
         siteLink="http://rss-aggregator.parascamarius.me/"
