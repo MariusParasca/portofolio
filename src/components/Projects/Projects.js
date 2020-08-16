@@ -29,6 +29,26 @@ const Projects = () => {
         features={['JavaScript', 'Webpack', 'HTML', 'CSS', 'Sass']}
       />
       <Project
+        siteLink="http://shipstock.com/world"
+        key="shipstockapp"
+        image="shipstockapp"
+        projectTitle="ShipStock App"
+        description="ShipStock App"
+        features={[
+          'JavaScript',
+          'React',
+          'React Infinity Scroll',
+          'React Linkify',
+          'Material UI',
+          'React Mentions',
+          'React Router Dom',
+          'Axios',
+          'Date Fns',
+          'Auth0',
+          'Redux',
+        ]}
+      />
+      <Project
         siteLink="http://eznote.xyz"
         key="eznote"
         image="eznote"
