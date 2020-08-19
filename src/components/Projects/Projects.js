@@ -89,7 +89,21 @@ const Projects = () => {
         image="trackmeteo"
         projectTitle="Track Meteo"
         description="Track meteo is an app that allows a couple of nice features: search for any location, automatic saving of searches, nice charts, day selection, see weather on the global map with different type of maps (temperature, precipitation, etc.). Custom selection of main weather metric, manage favorites weather cities (add, delete), and much "
-        features={['JavaScript', 'React', 'Material UI', 'Code Mirror', 'Html2canvas', 'Eslint browser', 'Prettier']}
+        features={[
+          'JavaScript',
+          'React',
+          'Material UI',
+          'Echarts',
+          'Moment',
+          'Redux',
+          'Redux Firestore',
+          'Redux Persist',
+          ' Redux Saga',
+          'Redux Firebase',
+          'Firebase',
+          'Axios',
+          'Timespace',
+        ]}
       />
       <Project
         siteLink="http://eznote.xyz"
