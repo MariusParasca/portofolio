@@ -33,7 +33,7 @@ const Projects = () => {
         key="shipstockapp"
         image="shipstockapp"
         projectTitle="ShipStock App"
-        description="ShipStock Application is a social network that connects all together the maritime community"
+        description="ShipStock Application is a social network that connects all together with the maritime community. The application is similar to LinkedIn and offers different features like following people, creating multiple profiles, sending messages, post new feeds, edit them, filter them in collections, etc"
         features={[
           'JavaScript',
           'React',
@@ -53,7 +53,7 @@ const Projects = () => {
         key="colorchance"
         image="colorchance"
         projectTitle="Color Chance"
-        description="Color Chance is an application that generates random colors based on some settings that you set. This app is great for trying to find new colors for designing a website, banner, etc. The colors that are generated could be saved and downloaded in different formats: txt, image and pdf"
+        description="Color Chance is an application that generates random colors based on some settings that you set. This app is great for trying to find new colors for designing a website, banner, etc. The colors that are generated could be saved and downloaded in different formats: txt, image, and pdf"
         features={['JavaScript', 'React', 'Material UI', 'Html2canvas', 'JSPdf', 'Redux', 'Chroma JS', 'Framer Motion']}
       />
       <Project
@@ -61,7 +61,7 @@ const Projects = () => {
         key="editcode"
         image="editcode"
         projectTitle="Javascript Code Editor"
-        description="Javascript Code is an easy way to edit and run javascript code. The application is design for code beginners that started to learn javascript and want an easy setup to learn about it"
+        description="Javascript Code is an easy way to edit and run the javascript code. The application is design for code beginners that started to learn javascript and want an easy setup to learn about it"
         features={['JavaScript', 'React', 'Material UI', 'Code Mirror', 'Html2canvas', 'Eslint browser', 'Prettier']}
       />
       <Project
@@ -69,7 +69,7 @@ const Projects = () => {
         key="extractcolor"
         image="extractcolor"
         projectTitle="Extract Color"
-        description="Extract Color is an application that extracts the main colors from an image. You are able to upload an image, search images by typing some words and take the main colors from an website that you like by typing the link of it. The colors that are generated could be saved and downloaded in different formats: txt, image and pdf"
+        description="Extract Color is an application that extracts the main colors from an image. You are able to upload an image, search images by typing some words and take the main colors from a website that you like by typing the link of it. The colors that are generated could be saved and downloaded in different formats: txt, image, and pdf"
         features={[
           'JavaScript',
           'React',
@@ -88,7 +88,7 @@ const Projects = () => {
         key="trackmeteo"
         image="trackmeteo"
         projectTitle="Track Meteo"
-        description="Track meteo is an app that allows a couple of nice features: search for any location, automatic saving of searches, nice charts, day selection, see weather on the global map with different type of maps (temperature, precipitation, etc.). Custom selection of main weather metric, manage favorites weather cities (add, delete), and much more"
+        description="Track meteo is an app that allows a couple of nice features: search for any location, automatic saving of searches, nice charts, day selection, see the weather on the global map with different types of maps (temperature, precipitation, etc.). A custom selection of main weather metric, manage favorites weather cities (add, delete), and much more"
         features={[
           'JavaScript',
           'React',
