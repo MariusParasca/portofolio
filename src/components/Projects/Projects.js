@@ -88,7 +88,7 @@ const Projects = () => {
         key="trackmeteo"
         image="trackmeteo"
         projectTitle="Track Meteo"
-        description="Track meteo is an app that allows a couple of nice features: search for any location, automatic saving of searches, nice charts, day selection, see weather on the global map with different type of maps (temperature, precipitation, etc.). Custom selection of main weather metric, manage favorites weather cities (add, delete), and much "
+        description="Track meteo is an app that allows a couple of nice features: search for any location, automatic saving of searches, nice charts, day selection, see weather on the global map with different type of maps (temperature, precipitation, etc.). Custom selection of main weather metric, manage favorites weather cities (add, delete), and much more"
         features={[
           'JavaScript',
           'React',
