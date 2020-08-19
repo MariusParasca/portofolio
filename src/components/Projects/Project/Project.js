@@ -41,6 +41,12 @@ const useStyles = makeStyles((theme) => ({
       cursor: 'pointer',
     },
   },
+  typographyRootWithoutHover: {
+    '&:hover': {
+      opacity: '1',
+      cursor: 'default',
+    },
+  },
   titleLinkRoot: {
     '&': {
       color: '#ffffff',
@@ -115,8 +121,18 @@ const Project = (props) => {
           <div className={classes.emptyContainer} />
           <div className={classes.bannerContainer}>
             <div className={classes.bannerTitleContainer}>
-              <Link href={props.siteLink || '#'} target="_blank" classes={{ root: styles.titleLinkRoot }}>
-                <Typography variant="h5" classes={{ root: styles.typographyRoot }}>
+              <Link
+                href={props.siteLink || undefined}
+                target={props.siteLink ? '_blank' : '_self'}
+                disabled={!!props.siteLink}
+                classes={{ root: styles.titleLinkRoot }}
+              >
+                <Typography
+                  variant="h5"
+                  classes={{
+                    root: `${styles.typographyRoot} ${props.siteLink ? '' : styles.typographyRootWithoutHover}`,
+                  }}
+                >
                   {props.projectTitle}
                 </Typography>
               </Link>
