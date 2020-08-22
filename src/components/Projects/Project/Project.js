@@ -116,7 +116,14 @@ const Project = (props) => {
       <Card variant="outlined" classes={{ root: styles.cardRoot }}>
         <div className={classes.cardMediaContainer}>
           <LazyLoad offset={100}>
-            <CardMedia title={props.projectTitle} classes={{ root: customStyles.cardMediaRoot }} />
+            <Link
+              href={props.siteLink || undefined}
+              target={props.siteLink ? '_blank' : '_self'}
+              disabled={!!props.siteLink}
+              classes={{ root: styles.titleLinkRoot }}
+            >
+              <CardMedia title={props.projectTitle} classes={{ root: customStyles.cardMediaRoot }} />
+            </Link>
           </LazyLoad>
           <div className={classes.emptyContainer} />
           <div className={classes.bannerContainer}>
