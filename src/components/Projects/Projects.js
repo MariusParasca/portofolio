@@ -21,14 +21,6 @@ const Projects = () => {
         Projects
       </Typography>
       <Project
-        siteLink="http://shipstock.com"
-        key="shipstock"
-        image="shipstock"
-        projectTitle="ShipStock Landing Page"
-        description="The landing page for ShipStock application"
-        features={['JavaScript', 'Webpack', 'HTML', 'CSS', 'Sass']}
-      />
-      <Project
         siteLink="http://shipstock.com/world"
         key="shipstockapp"
         image="shipstockapp"
@@ -55,6 +47,14 @@ const Projects = () => {
         projectTitle="Color Chance"
         description="Color Chance is an application that generates random colors based on some settings that you set. This app is great for trying to find new colors for designing a website, banner, etc. The colors that are generated could be saved and downloaded in different formats: txt, image, and pdf"
         features={['JavaScript', 'React', 'Material UI', 'Html2canvas', 'JSPdf', 'Redux', 'Chroma JS', 'Framer Motion']}
+      />
+      <Project
+        siteLink="http://shipstock.com"
+        key="shipstock"
+        image="shipstock"
+        projectTitle="ShipStock Landing Page"
+        description="The landing page for ShipStock application"
+        features={['JavaScript', 'Webpack', 'HTML', 'CSS', 'Sass']}
       />
       <Project
         siteLink="http://editcode.xyz"
