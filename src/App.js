@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ThemeProvider } from '@material-ui/core';
 import ReactGA from 'react-ga';
 
@@ -10,13 +10,15 @@ import Footer from 'components/Footer/Footer';
 import theme from './theme';
 
 function initializeReactGA() {
-  ReactGA.initialize('UA-177805206--1');
-  ReactGA.pageview('/');
+  ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_CODE);
+  ReactGA.pageview(window.location.pathname);
 }
 
-initializeReactGA();
-
 function App() {
+  useEffect(() => {
+    initializeReactGA();
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <div>
