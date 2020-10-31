@@ -121,7 +121,7 @@ const Projects = () => {
         ]}
       />
       <Project
-        siteLink="http://rss-aggregator.parascamarius.me/"
+        // siteLink="http://rss-aggregator.parascamarius.me/"
         key="rssAggregator"
         image="rssAggregator"
         projectTitle="Rss Aggregator"
@@ -170,7 +170,7 @@ const Projects = () => {
       />
       <Project
         key="lemnplai"
-        siteLink="http://lemnplai.parascamarius.me/"
+        // siteLink="http://lemnplai.parascamarius.me/"
         image="lemnplai"
         projectTitle="Lemnplai"
         firstGitHubText="Frontend"
