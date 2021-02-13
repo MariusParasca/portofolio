@@ -21,7 +21,7 @@ const Projects = () => {
         Projects
       </Typography>
       <Project
-        siteLink="http://shipstock.com/world"
+        // siteLink="http://shipstock.com/world"
         key="shipstockapp"
         image="shipstockapp"
         projectTitle="ShipStock App"
@@ -49,7 +49,7 @@ const Projects = () => {
         features={['JavaScript', 'React', 'Material UI', 'Html2canvas', 'JSPdf', 'Redux', 'Chroma JS', 'Framer Motion']}
       />
       <Project
-        siteLink="http://shipstock.com"
+        // siteLink="http://shipstock.com"
         key="shipstock"
         image="shipstock"
         projectTitle="ShipStock Landing Page"
