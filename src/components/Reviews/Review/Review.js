@@ -39,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
     top: -30,
     fontWeight: 600,
   },
+  ratingText: {
+    marginLeft: 15,
+  },
   [theme.breakpoints.down('xs')]: {
     devTitle: {
       top: -50,
@@ -67,7 +70,12 @@ const Review = (props) => {
       <Typography variant="h5" className={styles.title}>
         {title}
       </Typography>
-      <Rating name="read-only" value={5} readOnly size="large" className={styles.rating} />
+      <div className={classes.ratingContainer}>
+        <Rating name="read-only" value={5} readOnly size="large" className={styles.rating} />
+        <Typography variant="caption" className={styles.ratingText}>
+          <strong>5.00</strong> out of 5
+        </Typography>
+      </div>
       <div className={classes.textContainer}>
         <Typography variant="body1">
           <DoubleQuotesSvg height={15} className={classes.firstQuotes} />

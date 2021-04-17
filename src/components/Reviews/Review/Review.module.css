@@ -10,3 +10,8 @@
 .lastQuotes {
   margin-left: 15px;
 }
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+}
