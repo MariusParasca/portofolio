@@ -22,6 +22,25 @@
   padding: 30px;
 }
 
+.tabsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.menusContainer {
+  padding: 20px 10%;
+  padding-top: 0;
+}
+
+@media (max-width: 600px) {
+  .menusContainer {
+    padding: 20px 20px;
+    padding-top: 0;
+  }
+}
+
 @media (max-width: 960px) {
   .avatarContainer {
     margin-left: 4%;

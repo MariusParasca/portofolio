@@ -4,7 +4,6 @@ import ReactGA from 'react-ga';
 
 import ApplicationBar from 'components/ApplicationBar/ApplicationBar';
 import Main from 'components/Main/Main';
-import Projects from 'components/Projects/Projects';
 import Footer from 'components/Footer/Footer';
 
 import theme from './theme';
@@ -24,7 +23,6 @@ function App() {
       <div>
         <ApplicationBar />
         <Main />
-        <Projects />
         <Footer />
       </div>
     </ThemeProvider>

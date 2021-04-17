@@ -30,6 +30,19 @@ const theme = createMuiTheme({
       '"Segoe UI Symbol"',
     ].join(','),
   },
+  overrides: {
+    MuiButton: {
+      outlined: {
+        '&': {
+          border: '2px solid #2196F3',
+          color: '#2196F3',
+        },
+        '&:hover': {
+          border: '2px solid #1a78c2',
+        },
+      },
+    }
+  }
 });
 
 export default theme;

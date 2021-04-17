@@ -1,11 +1,15 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import classes from './Main.module.css';
 import { makeStyles } from '@material-ui/core';
+import Projects from 'components/Projects/Projects';
+import TabsMenu from './TabsMenu/TabsMenu';
+import Reviews from 'components/Reviews/Reviews';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   avatarRoot: {
     width: 300,
     height: 300,
@@ -29,23 +33,39 @@ const Main = () => {
   const styles = useStyles();
 
   return (
-    <div className={classes.mainTextWrapper}>
-      <div className={classes.avatarContainer}>
-        <Avatar
-          alt="Parasca Marius"
-          classes={{
-            root: styles.avatarRoot,
-          }}
-          src="/static/images/portrait.jpg"
-        />
+    <Router>
+      <div className={classes.mainTextWrapper}>
+        <div className={classes.avatarContainer}>
+          <Avatar
+            alt="Parasca Marius"
+            classes={{
+              root: styles.avatarRoot,
+            }}
+            src="/static/images/portrait.jpg"
+          />
+        </div>
+        <div className={classes.quoteContainer}>
+          <Typography variant="h5" classes={{ h5: styles.typographyH5Root }} align="center">
+            Problem-solving, Proactive, Organized, Fast-learner type of person that is very passionate about Web
+            Development. New technologies are always in my target for making a better product.
+          </Typography>
+        </div>
       </div>
-      <div className={classes.quoteContainer}>
-        <Typography variant="h5" classes={{ h5: styles.typographyH5Root }} align="center">
-          Problem-solving, Proactive, Organized, Fast-learner type of person that is very passionate about Web
-          Development. New technologies are always in my target for making a better product.
-        </Typography>
+      <div className={classes.tabsContainer}>
+        <TabsMenu />
       </div>
-    </div>
+
+      <div className={classes.menusContainer}>
+        <Switch>
+          <Route path="/reviews">
+            <Reviews />
+          </Route>
+          <Route path={['/', '/projects']}>
+            <Projects />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 };
 

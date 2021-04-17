@@ -1,25 +1,24 @@
+import { Typography } from '@material-ui/core';
 import React from 'react';
-import { Typography, makeStyles } from '@material-ui/core';
 
 import Project from './Project/Project';
 import classes from './Projects.module.css';
 
-const useStyles = makeStyles((theme) => ({
-  typographyRoot: {
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '3rem',
-    },
-  },
-}));
-
 const Projects = () => {
-  const styles = useStyles();
-
   return (
     <div className={classes.container}>
-      <Typography variant="h2" align="center" classes={{ root: styles.typographyRoot }}>
-        Projects
+      <Typography variant="body2" align="center">
+        *The projects showing here are only the ones that I didn't signed an NDA with. The other ones where I signed an
+        NDA can't be shown here
       </Typography>
+      <Project
+        siteLink="https://pastorsline.com/"
+        key="pastorsline"
+        image="pastorsline"
+        projectTitle="Big contributor to PastorLine App"
+        description="PastorLine is a Bulk Text Messaging Service For Churches"
+        features={['JavaScript', 'React', 'Material UI', 'React Router Dom', 'Axios', 'Redux', 'Redux-Thunk', 'Twillo']}
+      />
       <Project
         // siteLink="http://shipstock.com/world"
         key="shipstockapp"
