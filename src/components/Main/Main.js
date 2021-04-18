@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-dom';
 
 import classes from './Main.module.css';
 import { makeStyles } from '@material-ui/core';
 import Projects from 'components/Projects/Projects';
 import TabsMenu from './TabsMenu/TabsMenu';
-import Reviews from 'components/Reviews/Reviews';
+import Testimonials from 'components/Testimonials/Testimonials';
 
 const useStyles = makeStyles((theme) => ({
   avatarRoot: {
@@ -28,6 +28,16 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+const Reviews = () => {
+  const history = useHistory();
+
+  useEffect(() => {
+    history.replace('/testimonials');
+  }, [history]);
+
+  return null;
+};
 
 const Main = () => {
   const styles = useStyles();
@@ -59,6 +69,9 @@ const Main = () => {
         <Switch>
           <Route path="/reviews">
             <Reviews />
+          </Route>
+          <Route path="/testimonials">
+            <Testimonials />
           </Route>
           <Route path={['/', '/projects']}>
             <Projects />

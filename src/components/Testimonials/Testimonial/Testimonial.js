@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Avatar, Card, makeStyles, Typography, useMediaQuery } from '@material-ui/core';
 
 import { ReactComponent as DoubleQuotesSvg } from '../../../svgs/double-quotes.svg';
-import classes from './Review.module.css';
+import classes from './Testimonial.module.css';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Review = (props) => {
+const Testimonial = (props) => {
   const { title, text, src, alt, devTitle } = props;
 
   const styles = useStyles();
@@ -87,7 +87,7 @@ const Review = (props) => {
   );
 };
 
-Review.propTypes = {
+Testimonial.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   src: PropTypes.string,
@@ -95,4 +95,4 @@ Review.propTypes = {
   devTitle: PropTypes.string.isRequired,
 };
 
-export default Review;
+export default Testimonial;

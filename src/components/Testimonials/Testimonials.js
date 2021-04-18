@@ -1,11 +1,11 @@
 import React from 'react';
-import Review from './Review/Review';
-import classes from './Reviews.module.css';
+import Testimonial from './Testimonial/Testimonial';
+import classes from './Testimonials.module.css';
 
-const Reviews = (props) => {
+const Testimonials = (props) => {
   return (
     <div className={classes.container}>
-      <Review
+      <Testimonial
         title="Fabio Rotondo"
         text="The project was big but he was up to expectations.
         Great team and great team work. :-)"
@@ -13,7 +13,7 @@ const Reviews = (props) => {
         alt="Fabio Rotondo"
         devTitle="Tech Lead"
       />
-      <Review
+      <Testimonial
         title="Hendrik Beneke"
         text="Working with Marius was a great experience. He successfully finished the ReactJS project. He is a true expert in React and all things frontend like HTML, CSS, etc. 
           Communicating with him was always very easy and pleasant. I will work with him again in my next project."
@@ -21,13 +21,13 @@ const Reviews = (props) => {
         atl="Hendrik Beneke"
         devTitle="React Developer"
       />
-      <Review
+      <Testimonial
         title="Ara"
         text="Marius has been a perfect contractor, very professional, always available, consistently delivering top quality work. If you are looking for a professional full-stack React developer, he is the right guy for the job."
         alt="Ara"
         devTitle="Full Stack Developer"
       />
-      <Review
+      <Testimonial
         title="Thomas Oliver"
         text="Thanks for your help."
         src="/static/images/avatars/thomas.webp"
@@ -38,6 +38,6 @@ const Reviews = (props) => {
   );
 };
 
-Reviews.propTypes = {};
+Testimonials.propTypes = {};
 
-export default Reviews;
+export default Testimonials;

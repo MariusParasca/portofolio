@@ -1,32 +1,32 @@
-import React from 'react'
+import React from 'react';
 import classes from './TabsMenu.module.css';
-import {
-  NavLink
-} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
-const TabsMenu = props => {
+const TabsMenu = (props) => {
   return (
     <div className={classes.container}>
-        <NavLink exact to="/projects" className={classes.link} activeClassName={classes.linkActive}
-          isActive={(match, location) => {
-            if (match || location.pathname === "/") {
-              return true;
-            }
+      <NavLink
+        exact
+        to="/projects"
+        className={classes.link}
+        activeClassName={classes.linkActive}
+        isActive={(match, location) => {
+          if (match || location.pathname === '/') {
+            return true;
+          }
 
-            return false;
-          }}
-        >
-          Projects
-        </NavLink>
-        <NavLink exact to="/reviews" className={classes.link} activeClassName={classes.linkActive}>
-          Reviews
-        </NavLink>
+          return false;
+        }}
+      >
+        Projects
+      </NavLink>
+      <NavLink exact to="/testimonials" className={classes.link} activeClassName={classes.linkActive}>
+        Testimonials
+      </NavLink>
     </div>
-  )
-}
+  );
+};
 
-TabsMenu.propTypes = {
+TabsMenu.propTypes = {};
 
-}
-
-export default TabsMenu
+export default TabsMenu;
