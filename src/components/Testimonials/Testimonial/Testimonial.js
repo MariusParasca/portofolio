@@ -35,17 +35,12 @@ const useStyles = makeStyles((theme) => ({
   },
   devTitle: {
     position: 'absolute',
-    right: 10,
-    top: -30,
+    right: 15,
+    top: 8,
     fontWeight: 600,
   },
   ratingText: {
     marginLeft: 15,
-  },
-  [theme.breakpoints.down('xs')]: {
-    devTitle: {
-      top: -50,
-    },
   },
 }));
 
