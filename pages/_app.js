@@ -37,8 +37,6 @@ export default function MyApp(props) {
       <Head>
         <title>Marius Parasca | Portfolio</title>
         <meta charset="utf-8" />
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
