@@ -35,12 +35,15 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>My page</title>
+        <title>Marius Parasca | Portfolio</title>
         <meta charset="utf-8" />
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <meta name="theme-color" content="#000000" />
-        <meta name="description" content="This webpage represents Marius Parasca Porotofolio" />
+        <meta
+          name="description"
+          content="Marius Parasca is an expert in building complex web applications. Portfolio and testimonials"
+        />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
