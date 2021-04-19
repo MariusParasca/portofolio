@@ -1,17 +1,17 @@
 import React from 'react';
 import classes from './TabsMenu.module.css';
 import { NavLink } from 'react-router-dom';
+import NextLink from 'components/NextLink/NextLink';
 
 const TabsMenu = (props) => {
   return (
     <div className={classes.container}>
-      <NavLink
-        exact
-        to="/projects"
+      <NextLink
+        route="/projects"
         className={classes.link}
         activeClassName={classes.linkActive}
-        isActive={(match, location) => {
-          if (match || location.pathname === '/') {
+        isActive={(pathname) => {
+          if (pathname === '/' || pathname === '/projects') {
             return true;
           }
 
@@ -19,10 +19,10 @@ const TabsMenu = (props) => {
         }}
       >
         Projects
-      </NavLink>
-      <NavLink exact to="/testimonials" className={classes.link} activeClassName={classes.linkActive}>
+      </NextLink>
+      <NextLink route="/testimonials" className={classes.link} activeClassName={classes.linkActive}>
         Testimonials
-      </NavLink>
+      </NextLink>
     </div>
   );
 };

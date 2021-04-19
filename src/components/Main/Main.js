@@ -29,21 +29,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Reviews = () => {
-  const history = useHistory();
+const Main = (props) => {
+  const { children } = props;
 
-  useEffect(() => {
-    history.replace('/testimonials');
-  }, [history]);
-
-  return null;
-};
-
-const Main = () => {
   const styles = useStyles();
 
   return (
-    <Router>
+    <div>
       <div className={classes.mainTextWrapper}>
         <div className={classes.avatarContainer}>
           <Avatar
@@ -65,20 +57,8 @@ const Main = () => {
         <TabsMenu />
       </div>
 
-      <div className={classes.menusContainer}>
-        <Switch>
-          <Route path="/reviews">
-            <Reviews />
-          </Route>
-          <Route path="/testimonials">
-            <Testimonials />
-          </Route>
-          <Route path={['/', '/projects']}>
-            <Projects />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+      <div className={classes.menusContainer}>{children}</div>
+    </div>
   );
 };
 
