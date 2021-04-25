@@ -36,7 +36,7 @@ export default function MyApp(props) {
     <React.Fragment>
       <Head>
         <title>Marius Parasca | Portfolio</title>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
