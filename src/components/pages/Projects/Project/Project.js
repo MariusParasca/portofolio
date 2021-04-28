@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 import LazyLoad from 'react-lazyload';
 
-import GitHubIcon from 'components/GitHubIcon/GitHubIcon';
+import GitHubIcon from 'components/shared/GitHubIcon/GitHubIcon';
 import { SIZE_LG, SIZE_MD, SIZE_SM, SIZE_XS } from 'shared/constants';
 import ProjectContent from './ProjectContent/ProjectContent';
 import classes from './Project.module.css';

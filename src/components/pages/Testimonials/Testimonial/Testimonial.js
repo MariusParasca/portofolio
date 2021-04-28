@@ -3,7 +3,7 @@ import Rating from '@material-ui/lab/Rating';
 import PropTypes from 'prop-types';
 import { Avatar, Card, makeStyles, Typography, useMediaQuery } from '@material-ui/core';
 
-import DoubleQuotesSvg from '../../../svgs/double-quotes.svg';
+import DoubleQuotesSvg from '../../../../svgs/double-quotes.svg';
 import classes from './Testimonial.module.css';
 
 const useStyles = makeStyles((theme) => ({

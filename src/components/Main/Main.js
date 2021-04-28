@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router
 
 import classes from './Main.module.css';
 import { makeStyles } from '@material-ui/core';
-import Projects from 'components/Projects/Projects';
+import Projects from 'components/pages/Projects/Projects';
 import TabsMenu from './TabsMenu/TabsMenu';
-import Testimonials from 'components/Testimonials/Testimonials';
+import Testimonials from 'components/pages/Testimonials/Testimonials';
 
 const useStyles = makeStyles((theme) => ({
   avatarRoot: {

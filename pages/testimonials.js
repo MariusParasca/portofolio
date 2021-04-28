@@ -1,4 +1,4 @@
-const { default: Testimonials } = require('components/Testimonials/Testimonials');
+const { default: Testimonials } = require('components/pages/Testimonials/Testimonials');
 
 const TestimonialsPage = () => {
   return (

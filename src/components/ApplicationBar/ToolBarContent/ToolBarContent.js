@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, Link, Typography, Hidden } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-import GitHubIcon from 'components/GitHubIcon/GitHubIcon';
+import GitHubIcon from 'components/shared/GitHubIcon/GitHubIcon';
 import classes from './ToolBarContent.module.css';
 
 const useStyles = makeStyles((theme) => ({

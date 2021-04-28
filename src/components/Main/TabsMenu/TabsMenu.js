@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './TabsMenu.module.css';
 import { NavLink } from 'react-router-dom';
-import NextLink from 'components/NextLink/NextLink';
+import NextLink from 'components/shared/NextLink/NextLink';
 
 const TabsMenu = (props) => {
   return (
@@ -22,6 +22,9 @@ const TabsMenu = (props) => {
       </NextLink>
       <NextLink route="/testimonials" className={classes.link} activeClassName={classes.linkActive}>
         Testimonials
+      </NextLink>
+      <NextLink route="/contact" className={classes.link} activeClassName={classes.linkActive}>
+        Contact
       </NextLink>
     </div>
   );
