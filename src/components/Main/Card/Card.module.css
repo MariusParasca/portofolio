@@ -1,0 +1,10 @@
+.container {
+  max-width: 360px;
+  padding: 0 10px;
+}
+
+.ulContainer {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}

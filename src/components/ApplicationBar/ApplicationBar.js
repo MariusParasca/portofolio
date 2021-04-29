@@ -2,17 +2,25 @@ import React from 'react';
 import { makeStyles, AppBar, Toolbar } from '@material-ui/core';
 
 import ToolBarContent from './ToolBarContent/ToolBarContent';
+import classes from './ApplicationBar.module.css';
+import Wrapper from 'components/shared/Wrapper/Wrapper';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   appBarRoot: {
-    boxShadow: '0px 1px 5px 0px rgba(0,0,0,0.75)',
-    background: '#ffffff',
+    boxShadow: 'none',
+    background: 'none',
+    overflow: 'hidden',
   },
   menuIconRoot: {
     color: '#2196f3',
   },
   drawerPaper: {
     padding: '8px 20px',
+  },
+  toolbar: {
+    background: '#007ACC',
+    padding: 0,
+    minHeight: 50,
   },
 }));
 
@@ -27,9 +35,12 @@ const ApplicationBar = () => {
           root: styles.appBarRoot,
         }}
       >
-        <Toolbar>
-          <ToolBarContent />
+        <Toolbar className={styles.toolbar}>
+          <Wrapper>
+            <ToolBarContent />
+          </Wrapper>
         </Toolbar>
+        <div className={classes.emptyContainer} />
       </AppBar>
     </React.Fragment>
   );

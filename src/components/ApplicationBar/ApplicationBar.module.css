@@ -1,0 +1,9 @@
+.emptyContainer {
+  background: #007ACC;
+  height: 8.5vh;
+  transform: rotate(-1.5deg);
+  width: calc(100% + 5vh);
+  margin-left: -3vh;
+  margin-top: -5vh;
+  z-index: -1;
+}

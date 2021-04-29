@@ -7,8 +7,9 @@ import classes from './ToolBarContent.module.css';
 
 const useStyles = makeStyles((theme) => ({
   typographyRoot: {
-    color: '#000000',
-    flexGrow: 1,
+    fontSize: '2rem',
+    fontWeight: 500,
+    marginBottom: -20,
   },
   linkedInIconRoot: {
     color: '#2196f3',
@@ -29,33 +30,14 @@ const ToolBarContent = (props) => {
     <div className={classes.toolbarContent}>
       <Hidden smDown implementation="css">
         <Typography
-          variant="h6"
+          variant="h3"
           classes={{
             root: styles.typographyRoot,
           }}
         >
-          Marius Parasca | Portfolio
+          Marius Parasca
         </Typography>
       </Hidden>
-      <div className={classes.iconsContainer}>
-        <div className={classes.gitHubIconContainer}>
-          <GitHubIcon link="https://github.com/MariusParasca" text="GitHub" />
-        </div>
-        <Link
-          classes={{ root: styles.linkRoot }}
-          href="https://www.linkedin.com/in/marius-parasca-33785515b/"
-          target="_blank"
-        >
-          <div className={classes.iconContainer}>
-            <LinkedInIcon
-              classes={{
-                root: styles.linkedInIconRoot,
-              }}
-            />
-            <span className={classes.linkedInIconText}>Linked In</span>
-          </div>
-        </Link>
-      </div>
     </div>
   );
 };

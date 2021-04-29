@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './TabsMenu.module.css';
-import { NavLink } from 'react-router-dom';
 import NextLink from 'components/shared/NextLink/NextLink';
 
 const TabsMenu = (props) => {
