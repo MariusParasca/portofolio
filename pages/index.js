@@ -1,9 +1,9 @@
-import Projects from 'components/pages/Projects/Projects';
+import Home from 'components/pages/Home/Home';
 
 const HomePage = () => {
   return (
     <div>
-      <Projects />
+      <Home />
     </div>
   );
 };

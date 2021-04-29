@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Card = (props) => {
-  const { title } = props;
+  const { title, list } = props;
 
   const styles = useStyles();
 
@@ -27,7 +27,9 @@ const Card = (props) => {
       <Divider className={styles.divider} variant="middle" />
       <div className={classes.ulContainer}>
         <ul>
-          <li>Hei</li>
+          {list.map((text) => (
+            <li key={text}>{text}</li>
+          ))}
         </ul>
       </div>
     </div>
@@ -36,6 +38,11 @@ const Card = (props) => {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
+  list: PropTypes.arrayOf(PropTypes.string),
+};
+
+Card.defaultProps = {
+  list: [],
 };
 
 export default Card;

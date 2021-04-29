@@ -10,7 +10,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import ApplicationBar from 'components/ApplicationBar/ApplicationBar';
 import Footer from 'components/Footer/Footer';
-import Main from 'components/Main/Main';
 
 function initializeReactGA() {
   ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_CODE);
@@ -48,9 +47,7 @@ export default function MyApp(props) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <ApplicationBar />
-        <Main>
-          <Component {...pageProps} />
-        </Main>
+        <Component {...pageProps} />
         <Footer />
       </ThemeProvider>
     </React.Fragment>

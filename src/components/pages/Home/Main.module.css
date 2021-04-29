@@ -1,5 +1,5 @@
 .overflowContainer {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .avatarContainer {

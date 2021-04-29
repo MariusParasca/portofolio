@@ -9,7 +9,7 @@ import { Divider, Grid, makeStyles } from '@material-ui/core';
 import Projects from 'components/pages/Projects/Projects';
 import TabsMenu from './TabsMenu/TabsMenu';
 import Testimonials from 'components/pages/Testimonials/Testimonials';
-import * as programmingAnimationData from '../../../public/static/animations/programming.json';
+import * as programmingAnimationData from '../../../../public/static/animations/programming.json';
 import Wrapper from 'components/shared/Wrapper/Wrapper';
 import Card from './Card/Card';
 
@@ -56,6 +56,17 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
     fontSize: 24,
   },
+  recentWorkTypo: {
+    fontSize: 14,
+    fontWeight: 600,
+    color: '#FE3D0C',
+  },
+  whatWeAreOnTypo: {
+    color: '#0062a3',
+    textShadow: '0px 0px 1px rgba(150, 150, 150, 1)',
+    fontSize: '2.7rem',
+    fontWeight: 700,
+  },
 }));
 
 const Main = (props) => {
@@ -99,6 +110,14 @@ const Main = (props) => {
             src="/static/images/portrait.jpg"
           />
         </div> */}
+        {/* Over 4+ years of development experience specialized in Javascript/TypeScript.
+        Working on frontend is my favorite part in web development.
+        Built loads of incredible successfully projects.
+        Most productive freelancer ever seen.
+        Computer Science degree
+
+        Contact:
+        marius@nowscriptsoftware.com */}
         {/* <div className={classes.quoteContainer}>
           <Typography variant="h5" classes={{ h5: styles.typographyH5Root }} align="center">
             Problem-solving, Proactive, Organized, Fast-learner type of person that is very passionate about Web
@@ -109,7 +128,7 @@ const Main = (props) => {
 
       <div className={classes.colorContainer} />
       <div className={classes.blueContainer}>
-        <Fade duration={1500}>
+        <Fade duration={2000}>
           <Typography variant="subtitle1" className={styles.typographySubtitle1}>
             Expert in Web Development
           </Typography>
@@ -117,25 +136,49 @@ const Main = (props) => {
         <Wrapper>
           <Grid container justify="center" spacing={5}>
             <Grid item sm={4}>
-              <Fade duration={1500}>
-                <Card title="PASSION" />
+              <Fade duration={2000}>
+                <Card
+                  title="PASSION"
+                  list={['Very passionate about Web Development', 'Problem-solving', 'Proactive', 'Organized']}
+                />
               </Fade>
             </Grid>
             <Grid item sm={4}>
-              <Fade duration={1500}>
-                <Card title="TECHNOLOGIES" />
+              <Fade duration={2000} delay={1000}>
+                <Card
+                  title="TECHNOLOGIES"
+                  list={[
+                    'React/NextJS',
+                    'HTML5/CSS3 (SASS)',
+                    'Typescript',
+                    'GraphQL',
+                    'NodeJS/NestJS (RESTFull API)',
+                    'SQL/NoSQL',
+                    'Socketio',
+                  ]}
+                />
               </Fade>
             </Grid>
             <Grid item sm={4}>
-              <Fade duration={1500}>
-                <Card title="FRONTEND FOCUSED" />
+              <Fade duration={2000} delay={2000}>
+                <Card
+                  title="FRONTEND FOCUSED"
+                  list={['Expert on the front-end part', 'Big knowledge in backend as well', 'Backend when necessary']}
+                />
               </Fade>
             </Grid>
           </Grid>
-          , backend when neccessery
         </Wrapper>
       </div>
       <div className={classes.whiteContainer} />
+      <Fade bottom>
+        <Typography variant="h6" align="center" className={styles.recentWorkTypo}>
+          RECENT WORK
+        </Typography>
+        <Typography variant="h1" className={styles.whatWeAreOnTypo} align="center">
+          What I've been up to
+        </Typography>
+      </Fade>
       <Wrapper className={classes.wrapperContainer}>{children}</Wrapper>
     </div>
   );
