@@ -9,6 +9,8 @@ const useStyles = makeStyles((theme) => ({
   link: {
     '&': {
       cursor: 'pointer',
+      textDecoration: 'none',
+      color: 'inherit',
     },
     '&:hover': {
       textDecoration: 'none',

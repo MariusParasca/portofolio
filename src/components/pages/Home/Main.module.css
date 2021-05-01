@@ -75,6 +75,10 @@
   width: calc(100% + 5vh);
 }
 
+.projectsContainer {
+  margin-top: 90px;
+}
+
 
 @media (max-width: 960px) {
   .avatarContainer {

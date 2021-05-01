@@ -12,6 +12,10 @@ import Testimonials from 'components/pages/Testimonials/Testimonials';
 import * as programmingAnimationData from '../../../../public/static/animations/programming.json';
 import Wrapper from 'components/shared/Wrapper/Wrapper';
 import Card from './Card/Card';
+import Project from './Project/Project';
+import { projectsData } from '../../../shared/data';
+
+const homeProjectsData = projectsData.slice(0, 3);
 
 const useStyles = makeStyles((theme) => ({
   avatarRoot: {
@@ -171,15 +175,29 @@ const Main = (props) => {
         </Wrapper>
       </div>
       <div className={classes.whiteContainer} />
-      <Fade bottom>
-        <Typography variant="h6" align="center" className={styles.recentWorkTypo}>
-          RECENT WORK
-        </Typography>
-        <Typography variant="h1" className={styles.whatWeAreOnTypo} align="center">
-          What I've been up to
-        </Typography>
-      </Fade>
-      <Wrapper className={classes.wrapperContainer}>{children}</Wrapper>
+      <Wrapper className={classes.wrapperContainer}>
+        <Fade bottom>
+          <Typography variant="h6" align="center" className={styles.recentWorkTypo}>
+            RECENT WORK
+          </Typography>
+          <Typography variant="h1" className={styles.whatWeAreOnTypo} align="center">
+            What I've been up to
+          </Typography>
+        </Fade>
+        <div className={classes.projectsContainer}>
+          {homeProjectsData.map((project, index) => (
+            <Project
+              image={project.image}
+              siteLink={project.siteLink}
+              projectTitle={project.projectTitle}
+              description={project.description}
+              reverse={index % 2 != 0}
+              imagePosition={index === 1 ? 'top left' : 'center'}
+              testimonial={project.testimonial}
+            />
+          ))}
+        </div>
+      </Wrapper>
     </div>
   );
 };
