@@ -11,7 +11,7 @@ const Testimonials = (props) => {
           title={testimonial.title}
           text={testimonial.text}
           src={testimonial.src}
-          alt={testimonial.alt}
+          alt={testimonial.clientName}
           devTitle={testimonial.devTitle}
         />
       ))}

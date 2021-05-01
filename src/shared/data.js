@@ -3,7 +3,8 @@ export const testimonialsData = [
     title: 'Fabio Rotondo',
     text: 'The project was big but he was up to expectations. Great team and great team work. :-)',
     src: '/static/images/avatars/fabio.jfif',
-    alt: 'Fabio Rotondo',
+    clientName: 'Fabio Rotondo',
+    clientRank: '',
     devTitle: 'Tech Lead',
   },
   {
@@ -11,14 +12,15 @@ export const testimonialsData = [
     text:
       'Working with Marius was a great experience. He successfully finished the ReactJS project. He is a true expert in React and all things frontend like HTML, CSS, etc. Communicating with him was always very easy and pleasant. I will work with him again in my next project.',
     src: '/static/images/avatars/hendrik.jfif',
-    atl: 'Hendrik Beneke',
+    clientName: 'Hendrik Beneke',
+    clientRank: 'CTO ShipStock',
     devTitle: 'React Developer',
   },
   {
     title: 'Ara',
     text:
       'Marius has been a perfect contractor, very professional, always available, consistently delivering top quality work. If you are looking for a professional full-stack React developer, he is the right guy for the job.',
-    alt: 'Ara',
+    clientName: 'Ara',
     devTitle: 'Full Stack Developer',
   },
 ];
@@ -28,12 +30,14 @@ export const projectsData = [
     siteLink: 'https://pastorsline.com/',
     image: 'pastorsline',
     projectTitle: 'PastorLine App',
-    description: 'PastorLine is a Bulk Text Messaging Service For Churches',
+    description:
+      'PastorLine is a fantastic tool for sending texts that helps organized, text, automate, email and call Churches. PastorLine has the best web interface for  Bulk Text Messaging Service, that is intuitive and easy to use',
     features: ['JavaScript', 'React', 'Material UI', 'React Router Dom', 'Axios', 'Redux', 'Redux-Thunk', 'Twillo'],
     testimonial: {
       text:
         'Hey @Marius Parasca just a note that I appreciate what you do for us. Your coding and thought process has helped us. Thank you',
-      alt: 'Jason',
+      clientName: 'Jason Alexis',
+      clientRank: 'Founder',
       src: '/static/images/avatars/jason.jfif',
     },
   },
@@ -59,7 +63,8 @@ export const projectsData = [
       text:
         "Working with Marius was really great. He's a very experienced ReactJS developer. Communicating with him was very easy and always to the point. He really knows his stuff and proposed a lot of very good ideas. I will work with him in the future.",
       src: testimonialsData[1].src,
-      alt: testimonialsData[1].alt,
+      clientName: testimonialsData[1].clientName,
+      clientRank: testimonialsData[1].clientRank,
     },
   },
   {

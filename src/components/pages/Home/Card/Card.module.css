@@ -3,8 +3,7 @@
   padding: 0 10px;
 }
 
-.ulContainer {
-  color: white;
-  font-size: 18px;
-  font-weight: 400;
+.svgContainer {
+  display: flex;
+  justify-content: center;
 }

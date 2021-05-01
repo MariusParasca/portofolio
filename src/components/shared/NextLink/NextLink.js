@@ -31,7 +31,7 @@ const NextLink = (props) => {
   else if (router.pathname === route && activeClassName) currentActiveClassName = activeClassName;
 
   return (
-    <Link as={route} href={route} scroll={false}>
+    <Link as={route} href={route}>
       <a className={clsx(styles.link, className, currentActiveClassName)}>{children}</a>
     </Link>
   );

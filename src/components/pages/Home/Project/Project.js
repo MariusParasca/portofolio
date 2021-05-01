@@ -38,11 +38,28 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: '#4DABF5',
     marginLeft: '5px',
+    marginRight: '20px',
+  },
+  marginZero: {
+    margin: 0,
+  },
+  clientName: {
+    lineHeight: '1.5em',
+    margin: 0,
+    fontSize: 13,
+    fontWeight: 700,
+    color: '#0163A3',
+  },
+  clientRank: {
+    lineHeight: '1.5em',
+    fontSize: 12,
+    fontFamily: 'Hind',
+    color: '#a4abb2',
   },
 }));
 
 const Project = (props) => {
-  const { siteLink, image, projectTitle, description, reverse, imagePosition, testimonial } = props;
+  const { siteLink, image, projectTitle, description, reverse, imagePosition, testimonial, noMargin } = props;
 
   const styles = useStyles();
   const customStyles = makeStyles((theme) => ({
@@ -66,7 +83,7 @@ const Project = (props) => {
   }))();
 
   return (
-    <div className={clsx({ [classes.container]: true, [styles.flexReverse]: reverse })}>
+    <div className={clsx({ [classes.container]: true, [styles.flexReverse]: reverse, [styles.marginZero]: noMargin })}>
       <Fade bottom>
         <Card className={clsx({ [styles.cardRoot]: true, [styles.margin]: !reverse })}>
           <LazyLoad offset={100}>
@@ -98,9 +115,19 @@ const Project = (props) => {
               <div className={classes.testimonialQuote}>
                 <p>{testimonial.text}</p>
               </div>
-              <Avatar className={styles.avatar} alt={testimonial.alt} src={testimonial.src}>
-                {testimonial.alt?.charAt(0)}
-              </Avatar>
+              <div className={classes.avatarContainer}>
+                <Avatar className={styles.avatar} alt={testimonial.clientName} src={testimonial.src}>
+                  {testimonial.alt?.charAt(0)}
+                </Avatar>
+                <div>
+                  <Typography className={styles.clientName} variant="h5">
+                    {testimonial.clientName}
+                  </Typography>
+                  <Typography className={styles.clientRank} variant="h6">
+                    {testimonial.clientRank}
+                  </Typography>
+                </div>
+              </div>
             </div>
           </Fade>
         )}
@@ -121,6 +148,7 @@ Project.propTypes = {
     alt: PropTypes.string.isRequired,
     src: PropTypes.string,
   }),
+  noMargin: PropTypes.bool,
 };
 
 Project.defaultProps = {
@@ -131,6 +159,7 @@ Project.defaultProps = {
     text: '',
     alt: '',
   },
+  noMargin: false,
 };
 
 export default Project;

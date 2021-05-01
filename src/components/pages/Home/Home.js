@@ -14,6 +14,10 @@ import Wrapper from 'components/shared/Wrapper/Wrapper';
 import Card from './Card/Card';
 import Project from './Project/Project';
 import { projectsData } from '../../../shared/data';
+import NextLink from 'components/shared/NextLink/NextLink';
+import FrontendSvg from '../../../svgs/frontend.svg';
+import PassionSvg from '../../../svgs/passion.svg';
+import TechnologiesSvg from '../../../svgs/technologies.svg';
 
 const homeProjectsData = projectsData.slice(0, 3);
 
@@ -70,6 +74,12 @@ const useStyles = makeStyles((theme) => ({
     textShadow: '0px 0px 1px rgba(150, 150, 150, 1)',
     fontSize: '2.7rem',
     fontWeight: 700,
+  },
+  seeMoreTypo: {
+    marginTop: 50,
+    fontSize: 16,
+    fontWeight: 600,
+    color: '#FE3D0C',
   },
 }));
 
@@ -143,31 +153,33 @@ const Main = (props) => {
               <Fade duration={2000}>
                 <Card
                   title="PASSION"
-                  list={['Very passionate about Web Development', 'Problem-solving', 'Proactive', 'Organized']}
+                  text={['Very passionate about Web Development, Problem-solving, Proactive, and Organized']}
+                  svg={<PassionSvg width={55} height={60} />}
                 />
               </Fade>
             </Grid>
             <Grid item sm={4}>
               <Fade duration={2000} delay={1000}>
                 <Card
+                  animationDelay={1000}
                   title="TECHNOLOGIES"
-                  list={[
-                    'React/NextJS',
-                    'HTML5/CSS3 (SASS)',
-                    'Typescript',
-                    'GraphQL',
-                    'NodeJS/NestJS (RESTFull API)',
-                    'SQL/NoSQL',
-                    'Socketio',
+                  text={[
+                    'Frontend: React/NextJS (Redux, Material UI, etc.), HTML5/CSS3 (SASS), Typescript, GraphQL, SocketIO',
+                    'Backend: NodeJS/NestJS (RESTFull API, GraphQL, etc.), SQL/NoSQL, SocketIO',
                   ]}
+                  svg={<TechnologiesSvg width={60} height={60} />}
                 />
               </Fade>
             </Grid>
             <Grid item sm={4}>
               <Fade duration={2000} delay={2000}>
                 <Card
+                  animationDelay={2000}
                   title="FRONTEND FOCUSED"
-                  list={['Expert on the front-end part', 'Big knowledge in backend as well', 'Backend when necessary']}
+                  svg={<FrontendSvg width={50} height={60} />}
+                  text={[
+                    'Main focus is frontend, as I am an expert on the visual part of web development, also I have big knowledge in backend as well, do it when necessary',
+                  ]}
                 />
               </Fade>
             </Grid>
@@ -192,14 +204,26 @@ const Main = (props) => {
               projectTitle={project.projectTitle}
               description={project.description}
               reverse={index % 2 != 0}
-              imagePosition={index === 1 ? 'top left' : 'center'}
+              imagePosition={index === homeProjectsData.length - 1 ? 'top left' : 'center'}
               testimonial={project.testimonial}
+              noMargin={index === homeProjectsData.length - 1}
             />
           ))}
         </div>
+        <Fade>
+          <NextLink route="/projects">
+            <Typography variant="h6" align="center" className={styles.seeMoreTypo}>
+              See more
+            </Typography>
+          </NextLink>
+        </Fade>
       </Wrapper>
     </div>
   );
 };
+
+// <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+// <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+// <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 export default Main;
