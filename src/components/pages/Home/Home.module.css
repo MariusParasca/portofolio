@@ -79,6 +79,19 @@
   margin-top: 90px;
 }
 
+.seeMoreContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonialsContainer {
+  margin-top: 70px;
+}
+
+.testimonialsContainer div {
+  cursor: pointer
+}
+
 
 @media (max-width: 960px) {
   .avatarContainer {

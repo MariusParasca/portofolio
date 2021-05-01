@@ -87,16 +87,17 @@ const Project = (props) => {
       <Fade bottom>
         <Card className={clsx({ [styles.cardRoot]: true, [styles.margin]: !reverse })}>
           <LazyLoad offset={100}>
-            <Link
-              href={siteLink || undefined}
-              target={siteLink ? '_blank' : '_self'}
-              disabled={!!siteLink}
-              classes={{ root: styles.titleLinkRoot }}
-            >
+            {siteLink ? (
+              <Link href={siteLink || undefined} target={siteLink ? '_blank' : '_self'} disabled={!!siteLink}>
+                <Fade left={!reverse} right={reverse} delay={500}>
+                  <div className={customStyles.cardMediaRoot} />
+                </Fade>
+              </Link>
+            ) : (
               <Fade left={!reverse} right={reverse} delay={500}>
-                <CardMedia title="test" classes={{ root: customStyles.cardMediaRoot }} />
+                <div className={customStyles.cardMediaRoot} />
               </Fade>
-            </Link>
+            )}
           </LazyLoad>
         </Card>
       </Fade>

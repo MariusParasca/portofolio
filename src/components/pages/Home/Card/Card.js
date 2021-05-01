@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Divider, makeStyles, Typography } from '@material-ui/core';
 import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 import classes from './Card.module.css';
 
@@ -39,11 +40,15 @@ const Card = (props) => {
       <Typography variant="h6" className={styles.cardTitle} align="center">
         {title}
       </Typography>
-      {text.map((string) => (
-        <Typography variant="body1" align="center" className={styles.text} display="block">
-          {string}
-        </Typography>
-      ))}
+      <Fade>
+        <div>
+          {text.map((string, index) => (
+            <Typography key={index} variant="body1" align="center" className={styles.text} display="block">
+              {string}
+            </Typography>
+          ))}
+        </div>
+      </Fade>
     </div>
   );
 };

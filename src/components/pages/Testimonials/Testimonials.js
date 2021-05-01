@@ -1,6 +1,6 @@
 import React from 'react';
 import { testimonialsData } from 'shared/data';
-import Testimonial from './Testimonial/Testimonial';
+import Testimonial from '../../shared/Testimonial/Testimonial';
 import classes from './Testimonials.module.css';
 
 const Testimonials = (props) => {

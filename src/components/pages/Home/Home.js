@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Lottie from 'react-lottie';
 import Fade from 'react-reveal/Fade';
 
-import classes from './Main.module.css';
+import classes from './Home.module.css';
 import { Divider, Grid, makeStyles } from '@material-ui/core';
 import Projects from 'components/pages/Projects/Projects';
 import TabsMenu from './TabsMenu/TabsMenu';
@@ -13,13 +13,19 @@ import * as programmingAnimationData from '../../../../public/static/animations/
 import Wrapper from 'components/shared/Wrapper/Wrapper';
 import Card from './Card/Card';
 import Project from './Project/Project';
-import { projectsData } from '../../../shared/data';
+import { projectsData, testimonialsData } from '../../../shared/data';
 import NextLink from 'components/shared/NextLink/NextLink';
 import FrontendSvg from '../../../svgs/frontend.svg';
 import PassionSvg from '../../../svgs/passion.svg';
 import TechnologiesSvg from '../../../svgs/technologies.svg';
+import Testimonial from '../../shared/Testimonial/Testimonial';
+import Carousel from '../../shared/Carousel/Carousel';
+import { autoplayPlugin } from '@brainhubeu/react-carousel';
+
+import clsx from 'clsx';
 
 const homeProjectsData = projectsData.slice(0, 3);
+const homeTestimonialsData = testimonialsData.slice(0, 2);
 
 const useStyles = makeStyles((theme) => ({
   avatarRoot: {
@@ -80,6 +86,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 16,
     fontWeight: 600,
     color: '#FE3D0C',
+  },
+  secondDivider: {
+    margin: '35px 0',
   },
 }));
 
@@ -153,7 +162,9 @@ const Main = (props) => {
               <Fade duration={2000}>
                 <Card
                   title="PASSION"
-                  text={['Very passionate about Web Development, Problem-solving, Proactive, and Organized']}
+                  text={[
+                    'Very passionate about Web Development, Problem-solving, Fast-learner, Proactive, and Organized',
+                  ]}
                   svg={<PassionSvg width={55} height={60} />}
                 />
               </Fade>
@@ -199,6 +210,7 @@ const Main = (props) => {
         <div className={classes.projectsContainer}>
           {homeProjectsData.map((project, index) => (
             <Project
+              key={index}
               image={project.image}
               siteLink={project.siteLink}
               projectTitle={project.projectTitle}
@@ -210,12 +222,53 @@ const Main = (props) => {
             />
           ))}
         </div>
-        <Fade>
-          <NextLink route="/projects">
-            <Typography variant="h6" align="center" className={styles.seeMoreTypo}>
-              See more
-            </Typography>
-          </NextLink>
+        <div className={classes.seeMoreContainer}>
+          <Fade>
+            <NextLink route="/projects">
+              <Typography variant="h6" align="center" className={styles.seeMoreTypo}>
+                See more here
+              </Typography>
+            </NextLink>
+          </Fade>
+        </div>
+
+        <Divider variant="middle" className={clsx(styles.divider, styles.secondDivider)} />
+
+        <Fade bottom>
+          <Typography variant="h6" align="center" className={styles.recentWorkTypo}>
+            TESTIMONIALS
+          </Typography>
+          <Typography variant="h1" className={styles.whatWeAreOnTypo} align="center">
+            What they’re saying
+          </Typography>
+        </Fade>
+
+        <Fade bottom>
+          <div className={classes.testimonialsContainer}>
+            <Carousel
+              plugins={[
+                {
+                  resolve: autoplayPlugin,
+                  options: {
+                    interval: 7000,
+                  },
+                },
+                'infinite',
+                'fastSwipe',
+              ]}
+            >
+              {homeTestimonialsData.map((testimonial) => (
+                <Testimonial
+                  key={testimonial.title}
+                  title={testimonial.title}
+                  text={testimonial.text}
+                  src={testimonial.src}
+                  alt={testimonial.clientName}
+                  devTitle={testimonial.devTitle}
+                />
+              ))}
+            </Carousel>
+          </div>
         </Fade>
       </Wrapper>
     </div>
