@@ -21,13 +21,15 @@ export const testimonialsData = [
     text:
       'Marius has been a perfect contractor, very professional, always available, consistently delivering top quality work. If you are looking for a professional full-stack React developer, he is the right guy for the job.',
     clientName: 'Ara',
+    clientRank: '',
     devTitle: 'Full Stack Developer',
   },
   {
     title: 'Thomas Oliver',
     text: 'Thanks for your help.',
     src: '/static/images/avatars/thomas.webp',
-    alt: 'Thomas Oliver',
+    clientName: 'Thomas Oliver',
+    clientRank: 'CTO',
     devTitle: 'React Developer',
   },
 ];
