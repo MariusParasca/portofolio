@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'rgb(164,171,178)',
     fontSize: 14,
     lineHeight: 1.9,
+    fontFamily: 'Hind',
   },
   avatar: {
     backgroundColor: '#4DABF5',

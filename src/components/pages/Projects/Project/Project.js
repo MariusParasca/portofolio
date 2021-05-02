@@ -22,8 +22,8 @@ import classes from './Project.module.css';
 
 const useStyles = makeStyles((theme) => ({
   cardRoot: {
-    marginTop: '35px',
-    boxShadow: '0px 0px 3px 0px rgba(0, 0, 0, 0.5)',
+    marginTop: '70px',
+    boxShadow: '0 0 20px rgb(0 0 0 / 15%)',
   },
   dividerVertical: {
     backgroundColor: '#ffffff',
@@ -33,18 +33,15 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   typographyRoot: {
+    color: '#fff',
+    fontWeight: 600,
+    letterSpacing: '-.01em',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.2rem',
     },
     '&:hover': {
       opacity: '0.5',
       cursor: 'pointer',
-    },
-  },
-  typographyRootWithoutHover: {
-    '&:hover': {
-      opacity: '1',
-      cursor: 'default',
     },
   },
   titleLinkRoot: {
@@ -64,6 +61,7 @@ const Project = (props) => {
   const styles = useStyles();
   const customStyles = makeStyles((theme) => ({
     cardMediaRoot: {
+      cursor: 'pointer',
       height: '450px',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
@@ -111,38 +109,54 @@ const Project = (props) => {
     );
   }, [props, styles]);
 
+  const LinkWrapper = ({ children }) => (
+    <Link
+      href={props.siteLink || undefined}
+      target={props.siteLink ? '_blank' : '_self'}
+      disabled={!!props.siteLink}
+      classes={{ root: styles.titleLinkRoot }}
+    >
+      {children}
+    </Link>
+  );
+
   return (
     <React.Fragment>
       <Card variant="outlined" classes={{ root: styles.cardRoot }}>
         <div className={classes.cardMediaContainer}>
           <LazyLoad offset={100}>
-            <Link
-              href={props.siteLink || undefined}
-              target={props.siteLink ? '_blank' : '_self'}
-              disabled={!!props.siteLink}
-              classes={{ root: styles.titleLinkRoot }}
-            >
+            {props.siteLink ? (
+              <LinkWrapper>
+                <CardMedia title={props.projectTitle} classes={{ root: customStyles.cardMediaRoot }} />
+              </LinkWrapper>
+            ) : (
               <CardMedia title={props.projectTitle} classes={{ root: customStyles.cardMediaRoot }} />
-            </Link>
+            )}
           </LazyLoad>
           <div className={classes.emptyContainer} />
           <div className={classes.bannerContainer}>
             <div className={classes.bannerTitleContainer}>
-              <Link
-                href={props.siteLink || undefined}
-                target={props.siteLink ? '_blank' : '_self'}
-                disabled={!!props.siteLink}
-                classes={{ root: styles.titleLinkRoot }}
-              >
+              {props.siteLink ? (
+                <LinkWrapper>
+                  <Typography
+                    variant="h5"
+                    classes={{
+                      root: styles.typographyRoot,
+                    }}
+                  >
+                    {props.projectTitle}
+                  </Typography>
+                </LinkWrapper>
+              ) : (
                 <Typography
                   variant="h5"
                   classes={{
-                    root: `${styles.typographyRoot} ${props.siteLink ? '' : styles.typographyRootWithoutHover}`,
+                    root: styles.typographyRoot,
                   }}
                 >
                   {props.projectTitle}
                 </Typography>
-              </Link>
+              )}
             </div>
             <Hidden smDown implementation="css" className={classes.hiddenContainer}>
               {getGitHubComponent()}

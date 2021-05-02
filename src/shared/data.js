@@ -23,6 +23,13 @@ export const testimonialsData = [
     clientName: 'Ara',
     devTitle: 'Full Stack Developer',
   },
+  {
+    title: 'Thomas Oliver',
+    text: 'Thanks for your help.',
+    src: '/static/images/avatars/thomas.webp',
+    alt: 'Thomas Oliver',
+    devTitle: 'React Developer',
+  },
 ];
 
 export const projectsData = [

@@ -92,6 +92,13 @@
   cursor: pointer
 }
 
+.contactContainer{
+  margin-top: 50px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
 
 @media (max-width: 960px) {
   .avatarContainer {

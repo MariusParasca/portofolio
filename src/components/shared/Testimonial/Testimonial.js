@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
   title: {
     marginBottom: 10,
     marginTop: 40,
+    fontWeight: 600,
+    color: '#0163A3',
   },
   rating: {
     marginLeft: 0,
@@ -39,9 +41,17 @@ const useStyles = makeStyles((theme) => ({
     right: 15,
     top: 8,
     fontWeight: 600,
+    fontFamily: 'Hind',
+    color: 'rgb(164,171,178)',
   },
   ratingText: {
     marginLeft: 15,
+    color: 'rgb(164,171,178)',
+    fontFamily: 'Hind',
+  },
+  text: {
+    color: 'rgb(164,171,178)',
+    fontFamily: 'Hind',
   },
 }));
 
@@ -73,7 +83,7 @@ const Testimonial = (props) => {
         </Typography>
       </div>
       <div className={classes.textContainer}>
-        <Typography variant="body1">
+        <Typography variant="body1" className={styles.text}>
           <DoubleQuotesSvg height={15} className={classes.firstQuotes} />
           {text}
           <DoubleQuotesSvg height={15} className={classes.lastQuotes} />

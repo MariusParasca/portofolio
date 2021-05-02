@@ -23,6 +23,7 @@ import Carousel from '../../shared/Carousel/Carousel';
 import { autoplayPlugin } from '@brainhubeu/react-carousel';
 
 import clsx from 'clsx';
+import TitleSection from 'components/shared/TitleSection/TitleSection';
 
 const homeProjectsData = projectsData.slice(0, 3);
 const homeTestimonialsData = testimonialsData.slice(0, 2);
@@ -70,25 +71,34 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
     fontSize: 24,
   },
-  recentWorkTypo: {
-    fontSize: 14,
-    fontWeight: 600,
-    color: '#FE3D0C',
-  },
-  whatWeAreOnTypo: {
-    color: '#0062a3',
-    textShadow: '0px 0px 1px rgba(150, 150, 150, 1)',
-    fontSize: '2.7rem',
-    fontWeight: 700,
-  },
   seeMoreTypo: {
     marginTop: 50,
     fontSize: 16,
     fontWeight: 600,
-    color: '#FE3D0C',
+    color: '#A7AEB4',
   },
   secondDivider: {
     margin: '35px 0',
+  },
+  contactTitleText: {
+    fontSize: 26,
+    color: '#0163A3',
+    lineHeight: '1.6em',
+    fontWeight: 700,
+    marginBottom: 20,
+  },
+  contactTextDescription: {
+    color: 'rgb(164,171,178)',
+    fontSize: 18,
+    lineHeight: 1.9,
+    fontFamily: 'Hind',
+  },
+  email: {
+    fontWeight: 600,
+    fontFamily: 'Hind',
+    color: 'rgb(164,171,178)',
+    fontSize: 18,
+    marginTop: 20,
   },
 }));
 
@@ -106,19 +116,25 @@ const Main = (props) => {
     },
   };
 
+  const SeeMoreHere = ({ to }) => (
+    <div className={classes.seeMoreContainer}>
+      <Fade>
+        <NextLink route={to}>
+          <Typography variant="h6" align="center" className={styles.seeMoreTypo}>
+            See more here
+          </Typography>
+        </NextLink>
+      </Fade>
+    </div>
+  );
+
   return (
     <div className={classes.overflowContainer}>
       <div className={classes.mainWrapper}>
         <div className={classes.infoContainer}>
           <Fade left>
             <div className={classes.textContainer}>
-              <Typography variant="h1" className={styles.typographyH1}>
-                WEB DEVELOPMENT
-              </Typography>
-              <Divider className={styles.divider} />
-              <Typography variant="h2" className={styles.typographyH2} align="center">
-                Freelancing Services
-              </Typography>
+              <TitleSection subTitle="WEB DEVELOPMENT" title="Freelancing Services" />
             </div>
           </Fade>
           <Lottie options={defaultOptions} height={400} width={400} style={{ margin: 0 }} />
@@ -199,14 +215,7 @@ const Main = (props) => {
       </div>
       <div className={classes.whiteContainer} />
       <Wrapper className={classes.wrapperContainer}>
-        <Fade bottom>
-          <Typography variant="h6" align="center" className={styles.recentWorkTypo}>
-            RECENT WORK
-          </Typography>
-          <Typography variant="h1" className={styles.whatWeAreOnTypo} align="center">
-            What I've been up to
-          </Typography>
-        </Fade>
+        <TitleSection subTitle="RECENT WORK" title="What I've been up to" />
         <div className={classes.projectsContainer}>
           {homeProjectsData.map((project, index) => (
             <Project
@@ -222,26 +231,11 @@ const Main = (props) => {
             />
           ))}
         </div>
-        <div className={classes.seeMoreContainer}>
-          <Fade>
-            <NextLink route="/projects">
-              <Typography variant="h6" align="center" className={styles.seeMoreTypo}>
-                See more here
-              </Typography>
-            </NextLink>
-          </Fade>
-        </div>
+        <SeeMoreHere to="/projects" />
 
         <Divider variant="middle" className={clsx(styles.divider, styles.secondDivider)} />
 
-        <Fade bottom>
-          <Typography variant="h6" align="center" className={styles.recentWorkTypo}>
-            TESTIMONIALS
-          </Typography>
-          <Typography variant="h1" className={styles.whatWeAreOnTypo} align="center">
-            What they’re saying
-          </Typography>
-        </Fade>
+        <TitleSection subTitle="TESTIMONIALS" title="What they’re saying" />
 
         <Fade bottom>
           <div className={classes.testimonialsContainer}>
@@ -270,6 +264,27 @@ const Main = (props) => {
             </Carousel>
           </div>
         </Fade>
+
+        <SeeMoreHere to="/testimonials" />
+
+        <Divider variant="middle" className={clsx(styles.divider, styles.secondDivider)} />
+
+        <TitleSection subTitle="Contact me" title="Get in Touch" />
+        <div className={classes.contactContainer}>
+          <Typography variant="h3" className={styles.contactTitleText}>
+            Let's work together
+          </Typography>
+          <Typography variant="body1" className={styles.contactTextDescription}>
+            Ready to start your next project? Looking for a quote? Maybe a more general question? Send me an email below
+            and we’ll get right back to you.
+          </Typography>
+          <Typography variant="body1" className={styles.email}>
+            <Typography variant="body2" display="inline" className={styles.contactTextDescription}>
+              Email:{' '}
+            </Typography>
+            marius@nowscriptsoftware.com
+          </Typography>
+        </div>
       </Wrapper>
     </div>
   );

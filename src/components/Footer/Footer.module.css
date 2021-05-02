@@ -1,5 +1,6 @@
 .container {
-  color: #7f7f7f;
+  color: rgb(164,171,178);
+  font-family: 'Hind';
   padding: 20px;
   display: flex;
   justify-content: center;
