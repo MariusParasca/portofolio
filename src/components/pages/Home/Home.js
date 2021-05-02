@@ -225,7 +225,9 @@ const Main = (props) => {
 
         <TitleSection subTitle="Contact me" title="Get in Touch" />
         <Fade bottom>
-          <LetsWorkTogether />
+          <div className={classes.workTogetherContainer}>
+            <LetsWorkTogether />
+          </div>
         </Fade>
       </Wrapper>
     </div>

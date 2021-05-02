@@ -96,6 +96,14 @@
   margin-bottom: 50px;
 }
 
+.workTogetherContainer {
+  max-width: 450px;
+  margin-top: 55px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 960px) {
   .avatarContainer {
     margin-left: 4%;
