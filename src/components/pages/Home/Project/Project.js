@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     letterSpacing: '-.04em',
     marginBottom: 20,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 22,
+    },
   },
   descriptionTypo: {
     color: 'rgb(164,171,178)',
@@ -80,9 +83,12 @@ const Project = (props) => {
       // [theme.breakpoints.down('sm')]: {
       //   backgroundImage: `url(/static/images/${props.image}-${SIZE_SM}.jpg)`,
       // },
-      // [theme.breakpoints.down('xs')]: {
-      //   backgroundImage: `url(/static/images/${props.image}-${SIZE_XS}.jpg)`,
-      // },
+      [theme.breakpoints.down('xs')]: {
+        minHeight: '213px',
+        minWidth: '350px',
+        height: '100%',
+        width: '100%',
+      },
     },
   }))();
 

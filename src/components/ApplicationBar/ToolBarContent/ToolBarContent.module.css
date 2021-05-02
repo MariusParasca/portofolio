@@ -10,6 +10,44 @@
   margin-top: 10px;
 }
 
+.menuIcon {
+  cursor: pointer;
+}
+
+.drawerContainer {
+  width: 250px;
+  position: relative;
+  height: 100%;;
+}
+
+.drawerBlueContainer {
+  background: #007ACC;
+  height: calc(100% + 35vw);
+  transform: rotate(48deg);
+  width: calc(100% + 40vh);
+  position: absolute;
+  border-left: 40px solid #EEF8F4;
+  box-sizing: content-box;
+  z-index: 10;
+  left: 5vh;
+  bottom: -70vw;
+}
+
+.drawerContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.drawerLinksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
 @media (max-width: 960px) {
   .toolbarContent {
     justify-content: flex-end;

@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const NextLink = (props) => {
-  const { route, className, children, activeClassName, isActive } = props;
+  const { route, className, children, activeClassName, isActive, onClick } = props;
 
   const styles = useStyles();
 
@@ -35,7 +35,9 @@ const NextLink = (props) => {
 
   return (
     <Link as={route} href={route}>
-      <a className={clsx(styles.link, className, currentActiveClassName)}>{children}</a>
+      <a onClick={onClick} className={clsx(styles.link, className, currentActiveClassName)}>
+        {children}
+      </a>
     </Link>
   );
 };
@@ -46,6 +48,7 @@ NextLink.propTypes = {
   children: PropTypes.node.isRequired,
   activeClassName: PropTypes.string,
   isActive: PropTypes.func,
+  onClick: PropTypes.func,
 };
 
 NextLink.defaultProps = {

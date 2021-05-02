@@ -35,12 +35,18 @@ const useStyles = makeStyles((theme) => ({
     textShadow: '0px 0px 1px rgba(150, 150, 150, 1)',
     fontSize: '3rem',
     fontWeight: 600,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '2.1rem',
+    },
   },
   typographyH2: {
     color: '#FE3D0C',
     textShadow: '0px 0px 1px rgba(150, 150, 150, 0.5)',
     fontSize: '2rem',
     fontWeight: 500,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.5rem',
+    },
   },
   divider: {
     background: '#dbe6ee',
@@ -51,6 +57,11 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     textAlign: 'center',
     marginBottom: 85,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '2rem',
+      marginBottom: 35,
+      padding: '0 10px',
+    },
   },
   card: {
     background: '#fff',
@@ -141,7 +152,7 @@ const Main = (props) => {
         </Fade>
         <Wrapper>
           <Grid container justify="center" spacing={5}>
-            <Grid item sm={6} md={4}>
+            <Grid item sm={6} md={4} xs={12}>
               <Fade duration={2000}>
                 <Card
                   title="PASSION"
@@ -152,7 +163,7 @@ const Main = (props) => {
                 />
               </Fade>
             </Grid>
-            <Grid item sm={6} md={4}>
+            <Grid item sm={6} md={4} xs={12}>
               <Fade duration={2000} delay={1000}>
                 <Card
                   animationDelay={1000}
@@ -165,7 +176,7 @@ const Main = (props) => {
                 />
               </Fade>
             </Grid>
-            <Grid item sm={6} md={4}>
+            <Grid item sm={6} md={4} xs={12}>
               <Fade duration={2000} delay={2000}>
                 <Card
                   animationDelay={2000}

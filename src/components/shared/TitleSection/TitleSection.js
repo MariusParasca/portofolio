@@ -1,7 +1,7 @@
 import { makeStyles, Typography } from '@material-ui/core';
 import Fade from 'react-reveal/Fade';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   recentWorkTypo: {
     fontSize: 14,
     fontWeight: 600,
@@ -12,6 +12,9 @@ const useStyles = makeStyles(() => ({
     textShadow: '0px 0px 1px rgba(150, 150, 150, 1)',
     fontSize: '2.7rem',
     fontWeight: 700,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.8rem',
+    },
   },
 }));
 

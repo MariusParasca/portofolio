@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, Typography } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   contactTextDescription: {
     color: 'rgb(164,171,178)',
     fontSize: 18,
     lineHeight: 1.9,
     fontFamily: 'Hind',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 16,
+    },
   },
   email: {
     fontWeight: 600,
@@ -15,6 +18,13 @@ const useStyles = makeStyles(() => ({
     color: 'rgb(164,171,178)',
     fontSize: 18,
     marginTop: 20,
+    '& a': {
+      color: 'inherit',
+      textDecoration: 'none',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 16,
+    },
   },
   contactTitleText: {
     fontSize: 26,
@@ -22,6 +32,9 @@ const useStyles = makeStyles(() => ({
     lineHeight: '1.6em',
     fontWeight: 700,
     marginBottom: 20,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 22,
+    },
   },
 }));
 
@@ -43,7 +56,7 @@ const LetsWorkTogether = (props) => {
         <Typography variant="body2" display="inline" className={styles.contactTextDescription}>
           Email me:{' '}
         </Typography>
-        marius@nowscriptsoftware.com
+        <a href="mailto: marius@nowscriptsoftware.com">marius@nowscriptsoftware.com</a>
       </Typography>
     </div>
   );

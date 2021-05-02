@@ -133,7 +133,7 @@
   }
 
   .colorContainer {
-    height: 25vh;
+    height: 28vh;
   }
 
   .blueContainer {
@@ -153,5 +153,21 @@
   }
   .avatarContainer {
     margin-left: 0;
+  }
+
+  .colorContainer {
+    height: 39vh;
+  }
+
+  .blueContainer {
+    min-height: 185vh;
+  }
+
+  .whiteContainer {
+    margin-top: -2vh;
+  }
+
+  .infoContainer {
+    margin-top: 30px;
   }
 }
