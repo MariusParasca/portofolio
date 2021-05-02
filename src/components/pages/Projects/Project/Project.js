@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   cardRoot: {
     marginTop: '70px',
     boxShadow: '0 0 20px rgb(0 0 0 / 15%)',
+    '&:hover': {
+      boxShadow: '0 20px 70px rgb(0 0 0 / 25%)',
+    },
   },
   dividerVertical: {
     backgroundColor: '#ffffff',
@@ -89,26 +92,6 @@ const Project = (props) => {
     setAnchorEl(null);
   }, []);
 
-  const getGitHubComponent = useCallback(() => {
-    return (
-      <React.Fragment>
-        {props.firstGitHubLink && props.firstGitHubLink && (
-          <div className={classes.iconContainer}>
-            <GitHubIcon text={props.firstGitHubText} color="#ffffff" link={props.firstGitHubLink} />
-          </div>
-        )}
-        {props.secondGitHubText && props.secondGitHubLink && (
-          <React.Fragment>
-            <Divider orientation="vertical" classes={{ vertical: styles.dividerVertical }} />
-            <div className={classes.secondIconContainer}>
-              <GitHubIcon text={props.secondGitHubText} color="#ffffff" link={props.secondGitHubLink} />
-            </div>
-          </React.Fragment>
-        )}
-      </React.Fragment>
-    );
-  }, [props, styles]);
-
   const LinkWrapper = ({ children }) => (
     <Link
       href={props.siteLink || undefined}
@@ -158,31 +141,6 @@ const Project = (props) => {
                 </Typography>
               )}
             </div>
-            <Hidden smDown implementation="css" className={classes.hiddenContainer}>
-              {getGitHubComponent()}
-            </Hidden>
-            <Hidden mdUp implementation="css" className={classes.iconHiddenContainer}>
-              {props.firstGitHubLink && props.firstGitHubLink && props.secondGitHubText && props.secondGitHubLink && (
-                <>
-                  <IconButton onClick={openMenu} classes={{ root: styles.iconButtonRoot }}>
-                    <MoreHorizIcon />
-                  </IconButton>
-
-                  <Menu keepMounted open={Boolean(anchorEl)} anchorEl={anchorEl} onClose={closeMenu}>
-                    {props.firstGitHubLink && props.firstGitHubLink && (
-                      <MenuItem>
-                        <GitHubIcon text={props.firstGitHubText} color="#ffffff" link={props.firstGitHubLink} />
-                      </MenuItem>
-                    )}
-                    {props.secondGitHubText && props.secondGitHubLink && (
-                      <MenuItem>
-                        <GitHubIcon text={props.secondGitHubText} color="#ffffff" link={props.secondGitHubLink} />
-                      </MenuItem>
-                    )}
-                  </Menu>
-                </>
-              )}
-            </Hidden>
           </div>
         </div>
         <CardContent>

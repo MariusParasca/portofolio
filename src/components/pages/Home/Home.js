@@ -7,7 +7,6 @@ import Fade from 'react-reveal/Fade';
 import classes from './Home.module.css';
 import { Divider, Grid, makeStyles } from '@material-ui/core';
 import Projects from 'components/pages/Projects/Projects';
-import TabsMenu from './TabsMenu/TabsMenu';
 import Testimonials from 'components/pages/Testimonials/Testimonials';
 import * as programmingAnimationData from '../../../../public/static/animations/programming.json';
 import Wrapper from 'components/shared/Wrapper/Wrapper';
@@ -24,9 +23,10 @@ import { autoplayPlugin } from '@brainhubeu/react-carousel';
 
 import clsx from 'clsx';
 import TitleSection from 'components/shared/TitleSection/TitleSection';
+import { TESTIMONIALS_ROUTE, PROJECTS_ROUTE } from 'shared/routes';
 
 const homeProjectsData = projectsData.slice(0, 3);
-const homeTestimonialsData = testimonialsData.slice(0, 2);
+const homeTestimonialsData = testimonialsData.slice(0, 3);
 
 const useStyles = makeStyles((theme) => ({
   avatarRoot: {
@@ -134,7 +134,13 @@ const Main = (props) => {
         <div className={classes.infoContainer}>
           <Fade left>
             <div className={classes.textContainer}>
-              <TitleSection subTitle="WEB DEVELOPMENT" title="Freelancing Services" />
+              <Typography variant="h1" className={styles.typographyH1}>
+                WEB DEVELOPMENT
+              </Typography>
+              <Divider className={styles.divider} />
+              <Typography variant="h2" className={styles.typographyH2} align="center">
+                Freelancing Services
+              </Typography>
             </div>
           </Fade>
           <Lottie options={defaultOptions} height={400} width={400} style={{ margin: 0 }} />
@@ -231,7 +237,7 @@ const Main = (props) => {
             />
           ))}
         </div>
-        <SeeMoreHere to="/projects" />
+        <SeeMoreHere to={PROJECTS_ROUTE} />
 
         <Divider variant="middle" className={clsx(styles.divider, styles.secondDivider)} />
 
@@ -265,7 +271,7 @@ const Main = (props) => {
           </div>
         </Fade>
 
-        <SeeMoreHere to="/testimonials" />
+        <SeeMoreHere to={TESTIMONIALS_ROUTE} />
 
         <Divider variant="middle" className={clsx(styles.divider, styles.secondDivider)} />
 
@@ -280,7 +286,7 @@ const Main = (props) => {
           </Typography>
           <Typography variant="body1" className={styles.email}>
             <Typography variant="body2" display="inline" className={styles.contactTextDescription}>
-              Email:{' '}
+              Email me:{' '}
             </Typography>
             marius@nowscriptsoftware.com
           </Typography>

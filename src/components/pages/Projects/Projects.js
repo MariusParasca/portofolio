@@ -28,6 +28,7 @@ const Projects = () => {
         {projectsData.map((project) => (
           <Fade bottom>
             <Project
+              ke={project.projectTitle}
               siteLink={project.siteLink}
               key={project.projectTitle}
               projectTitle={project.projectTitle}

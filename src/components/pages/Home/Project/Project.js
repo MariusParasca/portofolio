@@ -70,7 +70,7 @@ const Project = (props) => {
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: imagePosition,
-      backgroundImage: `url(/static/images/${image}-${SIZE_LG}.jpg)`,
+      backgroundImage: `url(/static/images/${image}-home.jpg)`,
       // [theme.breakpoints.down('md')]: {
       //   backgroundImage: `url(/static/images/${props.image}-${SIZE_MD}.jpg)`,
       // },

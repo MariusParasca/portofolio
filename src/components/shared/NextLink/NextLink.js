@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: 'none',
     },
   },
+  active: {
+    color: '#e6e6e6',
+  },
 }));
 
 const NextLink = (props) => {
@@ -27,8 +30,8 @@ const NextLink = (props) => {
 
   let currentActiveClassName = '';
 
-  if (isActive && isActive(router.pathname)) currentActiveClassName = activeClassName;
-  else if (router.pathname === route && activeClassName) currentActiveClassName = activeClassName;
+  if (isActive && isActive(router.pathname)) currentActiveClassName = activeClassName ? activeClassName : styles.active;
+  else if (router.pathname === route) currentActiveClassName = activeClassName ? activeClassName : styles.active;
 
   return (
     <Link as={route} href={route}>

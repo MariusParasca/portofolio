@@ -2,7 +2,7 @@ export const testimonialsData = [
   {
     title: 'Hendrik Beneke',
     text:
-      'Working with Marius was a great experience. He successfully finished the ReactJS project. He is a true expert in React and all things frontend like HTML, CSS, etc. Communicating with him was always very easy and pleasant. I will work with him again in my next project.',
+      'Working with Marius was a great experience. He successfully finished the ReactJS project. He is a true expert in React and all things frontend like HTML, CSS, etc. Communicating with him was very easy and always to the point. He really knows his stuff and proposed a lot of very good ideas. ',
     src: '/static/images/avatars/hendrik.jfif',
     clientName: 'Hendrik Beneke',
     clientRank: 'CTO ShipStock',
@@ -92,6 +92,7 @@ export const projectsData = [
     features: ['JavaScript', 'React', 'Material UI', 'Html2canvas', 'JSPdf', 'Redux', 'Chroma JS', 'Framer Motion'],
   },
   {
+    siteLink: 'http://extractcolor.com',
     key: 'extractcolor',
     image: 'extractcolor',
     projectTitle: 'Extract Color',

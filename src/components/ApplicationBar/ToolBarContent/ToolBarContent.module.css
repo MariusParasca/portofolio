@@ -4,6 +4,11 @@
   justify-content: space-between;
 }
 
+.rightContainer {
+  display: flex;
+  margin-right: 100px;
+  margin-top: 10px;
+}
 
 @media (max-width: 960px) {
   .toolbarContent {

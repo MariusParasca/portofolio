@@ -1,6 +1,12 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 40px;
+}
 
+.testimonialContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapText {
+  margin: 40px 0;
 }
