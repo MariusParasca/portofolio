@@ -5,7 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from 'components/shared/GitHubIcon/GitHubIcon';
 import classes from './ToolBarContent.module.css';
 import NextLink from 'components/shared/NextLink/NextLink';
-import { ABOUT_ME_ROUTE, PROJECTS_ROUTE, TESTIMONIALS_ROUTE } from 'shared/routes';
+import { ABOUT_ME_ROUTE, HOME_ROUTE, PROJECTS_ROUTE, TESTIMONIALS_ROUTE } from 'shared/routes';
 
 const useStyles = makeStyles((theme) => ({
   typographyRoot: {
@@ -38,7 +38,7 @@ const ToolBarContent = (props) => {
   return (
     <div className={classes.toolbarContent}>
       <Hidden smDown implementation="css">
-        <NextLink route="/">
+        <NextLink route={HOME_ROUTE} activeClassName="none">
           <Typography
             variant="h3"
             classes={{

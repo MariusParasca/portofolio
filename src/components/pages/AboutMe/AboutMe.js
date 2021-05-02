@@ -59,9 +59,11 @@ const AboutMe = (props) => {
                   and problem-solving skills.
                 </li>
               </ul>
-              <div className={classes.workTogetherContainer}>
-                <LetsWorkTogether />
-              </div>
+              <Fade bottom>
+                <div className={classes.workTogetherContainer}>
+                  <LetsWorkTogether />
+                </div>
+              </Fade>
             </div>
           </div>
         </Fade>
