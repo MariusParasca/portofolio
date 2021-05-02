@@ -71,6 +71,19 @@ const useStyles = makeStyles((theme) => ({
   secondDivider: {
     margin: '35px 0',
   },
+  grid: {
+    [theme.breakpoints.down('sm')]: {
+      '& :nth-child(1)': {
+        order: 1,
+      },
+      '& :nth-child(2)': {
+        order: 3,
+      },
+      '& :nth-child(3)': {
+        order: 2,
+      },
+    },
+  },
 }));
 
 const Main = (props) => {
@@ -128,7 +141,7 @@ const Main = (props) => {
         </Fade>
         <Wrapper>
           <Grid container justify="center" spacing={5}>
-            <Grid item sm={4}>
+            <Grid item sm={6} md={4}>
               <Fade duration={2000}>
                 <Card
                   title="PASSION"
@@ -139,7 +152,7 @@ const Main = (props) => {
                 />
               </Fade>
             </Grid>
-            <Grid item sm={4}>
+            <Grid item sm={6} md={4}>
               <Fade duration={2000} delay={1000}>
                 <Card
                   animationDelay={1000}
@@ -152,7 +165,7 @@ const Main = (props) => {
                 />
               </Fade>
             </Grid>
-            <Grid item sm={4}>
+            <Grid item sm={6} md={4}>
               <Fade duration={2000} delay={2000}>
                 <Card
                   animationDelay={2000}

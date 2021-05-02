@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   },
   margin: {
     marginRight: 30,
+    [theme.breakpoints.down('md')]: {
+      marginRight: 0,
+    },
   },
   flexReverse: {
     flexDirection: 'row-reverse',

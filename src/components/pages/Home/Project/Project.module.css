@@ -47,3 +47,17 @@
 .avatarContainer {
   display: flex;
 }
+
+@media (max-width: 1280px) {
+  .container {
+    flex-wrap: wrap; 
+  }
+
+  .textContainer {
+    margin-top: 30px;
+  }
+
+  .testimonialQuote {
+    margin-top: 20px;
+  }
+}

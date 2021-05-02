@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       boxShadow: '0 20px 70px rgb(0 0 0 / 25%)',
     },
+    [theme.breakpoints.down('md')]: {
+      width: 260,
+      height: 260,
+    },
     [theme.breakpoints.down('sm')]: {
       width: 240,
       height: 240,
