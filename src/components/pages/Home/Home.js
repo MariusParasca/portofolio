@@ -24,21 +24,12 @@ import { autoplayPlugin } from '@brainhubeu/react-carousel';
 import clsx from 'clsx';
 import TitleSection from 'components/shared/TitleSection/TitleSection';
 import { TESTIMONIALS_ROUTE, PROJECTS_ROUTE } from 'shared/routes';
+import LetsWorkTogether from 'components/shared/LetsWorkTogether/LetsWorkTogether';
 
 const homeProjectsData = projectsData.slice(0, 3);
 const homeTestimonialsData = testimonialsData.slice(0, 3);
 
 const useStyles = makeStyles((theme) => ({
-  avatarRoot: {
-    width: 300,
-    height: 300,
-    boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-    border: '3px solid white',
-    [theme.breakpoints.down('sm')]: {
-      width: 240,
-      height: 240,
-    },
-  },
   typographyH1: {
     color: '#0062a3',
     textShadow: '0px 0px 1px rgba(150, 150, 150, 1)',
@@ -79,26 +70,6 @@ const useStyles = makeStyles((theme) => ({
   },
   secondDivider: {
     margin: '35px 0',
-  },
-  contactTitleText: {
-    fontSize: 26,
-    color: '#0163A3',
-    lineHeight: '1.6em',
-    fontWeight: 700,
-    marginBottom: 20,
-  },
-  contactTextDescription: {
-    color: 'rgb(164,171,178)',
-    fontSize: 18,
-    lineHeight: 1.9,
-    fontFamily: 'Hind',
-  },
-  email: {
-    fontWeight: 600,
-    fontFamily: 'Hind',
-    color: 'rgb(164,171,178)',
-    fontSize: 18,
-    marginTop: 20,
   },
 }));
 
@@ -146,29 +117,6 @@ const Main = (props) => {
           <Lottie options={defaultOptions} height={400} width={400} style={{ margin: 0 }} />
         </div>
         <div className={classes.emptyDesignContainer} />
-        {/* <div className={classes.avatarContainer}>
-          <Avatar
-            alt="Parasca Marius"
-            classes={{
-              root: styles.avatarRoot,
-            }}
-            src="/static/images/portrait.jpg"
-          />
-        </div> */}
-        {/* Over 4+ years of development experience specialized in Javascript/TypeScript.
-        Working on frontend is my favorite part in web development.
-        Built loads of incredible successfully projects.
-        Most productive freelancer ever seen.
-        Computer Science degree
-
-        Contact:
-        marius@nowscriptsoftware.com */}
-        {/* <div className={classes.quoteContainer}>
-          <Typography variant="h5" classes={{ h5: styles.typographyH5Root }} align="center">
-            Problem-solving, Proactive, Organized, Fast-learner type of person that is very passionate about Web
-            Development. New technologies are always in my target for making a better product.
-          </Typography>
-        </div> */}
       </div>
 
       <div className={classes.colorContainer} />
@@ -276,21 +224,9 @@ const Main = (props) => {
         <Divider variant="middle" className={clsx(styles.divider, styles.secondDivider)} />
 
         <TitleSection subTitle="Contact me" title="Get in Touch" />
-        <div className={classes.contactContainer}>
-          <Typography variant="h3" className={styles.contactTitleText}>
-            Let's work together
-          </Typography>
-          <Typography variant="body1" className={styles.contactTextDescription}>
-            Ready to start your next project? Looking for a quote? Maybe a more general question? Send me an email below
-            and we’ll get right back to you.
-          </Typography>
-          <Typography variant="body1" className={styles.email}>
-            <Typography variant="body2" display="inline" className={styles.contactTextDescription}>
-              Email me:{' '}
-            </Typography>
-            marius@nowscriptsoftware.com
-          </Typography>
-        </div>
+        <Fade bottom>
+          <LetsWorkTogether />
+        </Fade>
       </Wrapper>
     </div>
   );

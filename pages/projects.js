@@ -1,11 +1,7 @@
 import Projects from 'components/pages/Projects/Projects';
 
 const ProjectsPage = () => {
-  return (
-    <div>
-      <Projects />
-    </div>
-  );
+  return <Projects />;
 };
 
 export default ProjectsPage;
