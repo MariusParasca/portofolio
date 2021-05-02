@@ -26,9 +26,8 @@ const Projects = () => {
           <TitleSection subTitle="PROJECTS" title="I've been working on" />
         </div>
         {projectsData.map((project) => (
-          <Fade bottom>
+          <Fade ke={project.projectTitle}>
             <Project
-              ke={project.projectTitle}
               siteLink={project.siteLink}
               key={project.projectTitle}
               projectTitle={project.projectTitle}

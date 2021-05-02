@@ -15,10 +15,9 @@ const Testimonials = (props) => {
           <TitleSection subTitle="TESTIMONIALS" title="What they're saying" />
         </div>
         {testimonialsData.map((testimonial) => (
-          <Fade bottom>
+          <Fade bottom key={testimonial.title}>
             <div className={classes.testimonialContainer}>
               <Testimonial
-                key={testimonial.title}
                 title={testimonial.title}
                 text={testimonial.text}
                 src={testimonial.src}

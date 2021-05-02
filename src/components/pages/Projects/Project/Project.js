@@ -13,6 +13,7 @@ import {
   MenuItem,
   makeStyles,
 } from '@material-ui/core';
+import Fade from 'react-reveal/Fade';
 import LazyLoad from 'react-lazyload';
 
 import GitHubIcon from 'components/shared/GitHubIcon/GitHubIcon';
@@ -110,10 +111,14 @@ const Project = (props) => {
           <LazyLoad offset={100}>
             {props.siteLink ? (
               <LinkWrapper>
-                <CardMedia title={props.projectTitle} classes={{ root: customStyles.cardMediaRoot }} />
+                <Fade left>
+                  <CardMedia title={props.projectTitle} classes={{ root: customStyles.cardMediaRoot }} />
+                </Fade>
               </LinkWrapper>
             ) : (
-              <CardMedia title={props.projectTitle} classes={{ root: customStyles.cardMediaRoot }} />
+              <Fade left>
+                <CardMedia title={props.projectTitle} classes={{ root: customStyles.cardMediaRoot }} />
+              </Fade>
             )}
           </LazyLoad>
           <div className={classes.emptyContainer} />
