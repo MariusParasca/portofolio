@@ -95,6 +95,14 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  testimonial: {
+    [theme.breakpoints.down('xs')]: {
+      width: '320px',
+      marginLeft: 20,
+      marginRight: 20,
+      marginBottom: 10,
+    },
+  },
 }));
 
 const Main = (props) => {
@@ -129,7 +137,7 @@ const Main = (props) => {
         <div className={classes.infoContainer}>
           <Fade left>
             <div className={classes.textContainer}>
-              <Typography variant="h1" className={styles.typographyH1}>
+              <Typography variant="h1" className={styles.typographyH1} align="center">
                 WEB DEVELOPMENT
               </Typography>
               <Divider className={styles.divider} />
@@ -231,6 +239,7 @@ const Main = (props) => {
             >
               {homeTestimonialsData.map((testimonial) => (
                 <Testimonial
+                  className={styles.testimonial}
                   key={testimonial.title}
                   title={testimonial.title}
                   text={testimonial.text}

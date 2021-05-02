@@ -77,15 +77,9 @@ const Project = (props) => {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: imagePosition,
       backgroundImage: `url(/static/images/${image}-home.jpg)`,
-      // [theme.breakpoints.down('md')]: {
-      //   backgroundImage: `url(/static/images/${props.image}-${SIZE_MD}.jpg)`,
-      // },
-      // [theme.breakpoints.down('sm')]: {
-      //   backgroundImage: `url(/static/images/${props.image}-${SIZE_SM}.jpg)`,
-      // },
       [theme.breakpoints.down('xs')]: {
-        minHeight: '213px',
-        minWidth: '350px',
+        minHeight: '206px',
+        minWidth: '340px',
         height: '100%',
         width: '100%',
       },

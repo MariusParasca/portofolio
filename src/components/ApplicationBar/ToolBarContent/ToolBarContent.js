@@ -84,7 +84,7 @@ const ToolBarContent = (props) => {
       <NextLink
         route={PROJECTS_ROUTE}
         onClick={matchSmDown ? toggleDrawer : undefined}
-        activeClassName={matchSmDown ? styles.activeLinkSmDown : 'none'}
+        activeClassName={matchSmDown ? styles.activeLinkSmDown : ''}
       >
         <Typography variant="h3" className={styles.menuItem}>
           Projects
@@ -93,7 +93,7 @@ const ToolBarContent = (props) => {
       <NextLink
         route={TESTIMONIALS_ROUTE}
         onClick={matchSmDown ? toggleDrawer : undefined}
-        activeClassName={matchSmDown ? styles.activeLinkSmDown : 'none'}
+        activeClassName={matchSmDown ? styles.activeLinkSmDown : ''}
       >
         <Typography variant="h3" className={styles.menuItem}>
           Testimonials
@@ -102,7 +102,7 @@ const ToolBarContent = (props) => {
       <NextLink
         route={ABOUT_ME_ROUTE}
         onClick={matchSmDown ? toggleDrawer : undefined}
-        activeClassName={matchSmDown ? styles.activeLinkSmDown : 'none'}
+        activeClassName={matchSmDown ? styles.activeLinkSmDown : ''}
       >
         <Typography variant="h3" className={styles.menuItem}>
           About me

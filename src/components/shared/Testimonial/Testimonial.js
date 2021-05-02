@@ -5,6 +5,7 @@ import { Avatar, Card, makeStyles, Typography, useMediaQuery } from '@material-u
 
 import DoubleQuotesSvg from '../../../svgs/double-quotes.svg';
 import classes from './Testimonial.module.css';
+import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -35,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
     left: 35,
     fontSize: 35,
     backgroundColor: '#4dabf5',
+    [theme.breakpoints.down('xs')]: {
+      left: 20,
+    },
   },
   devTitle: {
     position: 'absolute',
@@ -43,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     fontFamily: 'Hind',
     color: 'rgb(164,171,178)',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.9rem',
+    },
   },
   ratingText: {
     marginLeft: 15,
@@ -56,14 +63,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Testimonial = (props) => {
-  const { title, text, src, alt, devTitle } = props;
+  const { title, text, src, alt, devTitle, className } = props;
 
   const styles = useStyles();
 
   const matchXS = useMediaQuery((theme) => theme.breakpoints.down('xs'));
 
   return (
-    <Card className={styles.card}>
+    <Card className={clsx(styles.card, className)}>
       <Typography variant="body1" className={styles.devTitle}>
         <Typography variant="body2" display={matchXS ? 'block' : 'inline'}>
           My role:{' '}
@@ -99,6 +106,11 @@ Testimonial.propTypes = {
   src: PropTypes.string,
   alt: PropTypes.string,
   devTitle: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+
+Testimonial.defaultProps = {
+  className: '',
 };
 
 export default Testimonial;
