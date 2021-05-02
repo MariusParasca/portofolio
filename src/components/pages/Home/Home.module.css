@@ -57,10 +57,10 @@
 }
 
 .blueContainer {
-  min-height: 80vh;
   background: #007ACC;
   margin-top: -6vh;
-  padding-top: 14vh;
+  padding-top: 100px;
+  padding-bottom: 150px;
 }
 
 .whiteContainer {
@@ -136,9 +136,6 @@
     height: 28vh;
   }
 
-  .blueContainer {
-    min-height: 108vh;
-  }
 }
 
 @media (max-width: 600px) {
@@ -159,10 +156,6 @@
     height: 39vh;
   }
 
-  .blueContainer {
-    min-height: 185vh;
-  }
-
   .whiteContainer {
     margin-top: -2vh;
   }
@@ -173,5 +166,10 @@
 
   .testimonialsContainer {
     margin-top: 40px;
+  }
+
+  .blueContainer {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }

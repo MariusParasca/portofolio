@@ -8,6 +8,7 @@ import GitHubIcon from 'components/shared/GitHubIcon/GitHubIcon';
 import classes from './ToolBarContent.module.css';
 import NextLink from 'components/shared/NextLink/NextLink';
 import { ABOUT_ME_ROUTE, HOME_ROUTE, PROJECTS_ROUTE, TESTIMONIALS_ROUTE } from 'shared/routes';
+import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
   typographyRoot: {
@@ -66,6 +67,9 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     overflow: 'hidden',
   },
+  drawerMenuIcon: {
+    marginBottom: -10,
+  },
 }));
 
 const ToolBarContent = (props) => {
@@ -115,7 +119,7 @@ const ToolBarContent = (props) => {
     <>
       <div className={classes.toolbarContent}>
         <Hidden mdUp>
-          <IconButton className={styles.iconButton} onClick={toggleDrawer}>
+          <IconButton className={clsx(styles.iconButton, styles.drawerMenuIcon)} onClick={toggleDrawer}>
             <MenuIcon className={classes.menuIcon} />
           </IconButton>
         </Hidden>
