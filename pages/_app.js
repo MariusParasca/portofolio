@@ -34,13 +34,29 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>Marius Parasca | Portfolio</title>
+        <title>Expert in Web Development | Frontend focused | Marius Parasca</title>
         <meta charSet="utf-8" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#007ACD" />
         <meta
           name="description"
-          content="Marius Parasca is an expert in building complex web applications. Portfolio and testimonials"
+          content="Expert in Web Development. Freelancer with over 4+ years of experience. Very passionate about Web Development (frontend focused), Problem-solver Fast-learner, Proactive and Organized."
         />
+        <link rel="canonical" href="https://mariusparasca.com" />
+        <meta property="og:title" content="Expert in Web Development | Frontend Focused" />
+        <meta
+          property="og:description"
+          content="Expert in Web Development. Freelancer with over 4+ years of experience. Very passionate about Web Development (frontend focused), Problem-solver Fast-learner, Proactive and Organized."
+        />
+        <meta property="og:image" content="https://mariusparasca.com/static/images/thumbnail.jpg" />
+        <meta property="og:image:width" content="1902" />
+        <meta property="og:image:height" content="876" />
+        <meta property="og:url" content="https://mariusparasca.com" />
+        <meta property="og:site_name" content="Expert in Web Development | Frontend focused | Marius Parasca" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Expert in Web Development | Frontend focused | Marius Parasca" />
+        <meta name="twitter:description" content="Expert in Web Development. Freelancer with over 4+ years of experience. Very passionate about Web Development (frontend focused), Problem-solver Fast-learner, Proactive and Organized." />
+        <meta name="twitter:image" content="https://mariusparasca.com/static/images/thumbnail.jpg" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>

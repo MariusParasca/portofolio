@@ -110,6 +110,8 @@ const Main = (props) => {
 
   const styles = useStyles();
 
+  const matchXsDown = useMediaQuery((theme) => theme.breakpoints.down('xs'));
+
   const defaultOptions = {
     loop: false,
     autoplay: true,
@@ -172,7 +174,7 @@ const Main = (props) => {
               </Fade>
             </Grid>
             <Grid item sm={6} md={4} xs={12}>
-              <Fade duration={2000} delay={1000}>
+              <Fade duration={2000} delay={matchXsDown ? 0 : 1000}>
                 <Card
                   animationDelay={1000}
                   title="TECHNOLOGIES"
@@ -185,7 +187,7 @@ const Main = (props) => {
               </Fade>
             </Grid>
             <Grid item sm={6} md={4} xs={12}>
-              <Fade duration={2000} delay={2000}>
+              <Fade duration={2000} delay={matchXsDown ? 0 : 2000}>
                 <Card
                   animationDelay={2000}
                   title="FRONTEND FOCUSED"
