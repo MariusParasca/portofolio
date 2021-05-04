@@ -5,7 +5,7 @@ import Lottie from 'react-lottie';
 import Fade from 'react-reveal/Fade';
 
 import classes from './Home.module.css';
-import { Divider, Grid, makeStyles } from '@material-ui/core';
+import { Divider, Grid, makeStyles, useMediaQuery } from '@material-ui/core';
 import Projects from 'components/pages/Projects/Projects';
 import Testimonials from 'components/pages/Testimonials/Testimonials';
 import * as programmingAnimationData from '../../../../public/static/animations/programming.json';
