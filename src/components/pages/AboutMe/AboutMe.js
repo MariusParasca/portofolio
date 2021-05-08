@@ -49,15 +49,15 @@ const AboutMe = (props) => {
             <div>
               <ul className={classes.textDescription}>
                 <li>Over 4+ years of development experience specialized in Javascript/TypeScript.</li>
-                <li>Built loads of incredible successfully projects. All the clients super satisfied by my work.</li>
-                <li>
-                  Most productive freelancer you will ever see. When I work, I am in focus mode. We all know how
-                  productive we can be when we focus at the task at hand
-                </li>
                 <li>
                   NOT a simple coder... True expert in Web Development (especially on frontend) with critical thinking
                   and problem-solving skills, organized and fast-learner as well.
                 </li>
+                <li>
+                  Most productive freelancer you will ever see. When I work, I am in focus mode. We all know how
+                  productive we can be when we focus at the task at hand
+                </li>
+                <li>Built loads of incredible successfully projects. All the clients super satisfied by my work.</li>
                 <li>
                   Computer Science degree which builds on the crucial skill a developer should have: critical thinking
                   and problem-solving skills.
