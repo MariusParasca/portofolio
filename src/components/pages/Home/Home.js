@@ -165,6 +165,7 @@ const Main = (props) => {
             <Grid item sm={6} md={4} xs={12}>
               <Fade duration={2000}>
                 <Card
+                  animationDelay={500}
                   title="PASSION"
                   text={[
                     'Very passionate about Web Development, Problem-solving, Fast-learner, Proactive, and Organized',
@@ -176,7 +177,7 @@ const Main = (props) => {
             <Grid item sm={6} md={4} xs={12}>
               <Fade duration={2000} delay={matchXsDown ? 0 : 1000}>
                 <Card
-                  animationDelay={1000}
+                  animationDelay={matchXsDown ? 0 : 1000}
                   title="TECHNOLOGIES"
                   text={[
                     'Frontend: React/NextJS (Redux, Material UI, etc.), HTML5/CSS3 (SASS), Typescript, GraphQL, SocketIO',
@@ -189,7 +190,7 @@ const Main = (props) => {
             <Grid item sm={6} md={4} xs={12}>
               <Fade duration={2000} delay={matchXsDown ? 0 : 2000}>
                 <Card
-                  animationDelay={2000}
+                  animationDelay={matchXsDown ? 0 : 2000}
                   title="FRONTEND FOCUSED"
                   svg={<FrontendSvg width={50} height={60} />}
                   text={[
